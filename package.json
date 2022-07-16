@@ -1,0 +1,23 @@
+{
+  "name": "mathematics-book",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "html-prettify": "^1.0.7",
+    "jsdom": "^20.0.0",
+    "latex.js": "^0.12.4",
+    "prettier": "^2.7.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13"
+  }
+}
