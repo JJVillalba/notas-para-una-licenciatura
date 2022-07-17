@@ -1,0 +1,650 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"newcom",
+				"\\newcommand{cmd}[args]{def}                       \tlatex-document"
+			],
+			[
+				"comma",
+				"\\CheckCommand{cmd}[args]{def}                     \tlatex-dev"
+			],
+			[
+				"end",
+				"\\end{}                                            \tlatex-document"
+			],
+			[
+				"newe",
+				"\\newenvironment{nam}{begdef}{enddef}              \tlatex-document"
+			],
+			[
+				"incl",
+				"\\include{file}                                    \tlatex-document"
+			],
+			[
+				"include",
+				"\\include{file}                                    \tlatex-document"
+			],
+			[
+				"inclu",
+				"\\include{file}                                    \tlatex-document"
+			],
+			[
+				"inc",
+				"\\include{file}                                    \tlatex-document"
+			],
+			[
+				"docume",
+				"\\documentclass{style}                             \tlatex-document"
+			],
+			[
+				"newcoma",
+				"\\newcommand{cmd}{def}                             \tlatex-document"
+			],
+			[
+				"program",
+				"\\programmingHourRate{}                            \tlocal"
+			],
+			[
+				"text",
+				"\\textbackslash                                    \tlatex-document"
+			],
+			[
+				"h",
+				"\\hline                                            \tlatex-document"
+			],
+			[
+				"ch",
+				"\\chaptermark{code}                                \tlatex-document"
+			],
+			[
+				"sec",
+				"\\section{title}                                   \tlatex-document"
+			],
+			[
+				"usepa",
+				"\\usepackage{package}                              \tlatex-document"
+			],
+			[
+				"full",
+				"\\fullcite{key}                                    \tbiblatex"
+			],
+			[
+				"cap",
+				"\\caption{title}                                   \tlatex-document"
+			],
+			[
+				"newco",
+				"\\newcommand{cmd}{def}                             \tlatex-document"
+			],
+			[
+				"renw",
+				"\\renewcommand{cmd}{def}                           \tlatex-document"
+			],
+			[
+				"new",
+				"\\newpage                                          \tlatex-document"
+			],
+			[
+				"docum",
+				"\\documentclass{style}                             \tlatex-document"
+			],
+			[
+				"footno",
+				"\\footnote{text}                                   \tlatex-document"
+			],
+			[
+				"base",
+				"\\baselinestretch                                  \tlatex-dev"
+			],
+			[
+				"renew",
+				"\\renewcommand{cmd}{def}                           \tlatex-document"
+			],
+			[
+				"use",
+				"\\usepackage{package}                              \tlatex-document"
+			],
+			[
+				"sube",
+				"\\subseteq                                         \tlatex-mathsymbols"
+			],
+			[
+				"emp",
+				"\\empty                                            \ttex"
+			],
+			[
+				"subset",
+				"\\subseteq                                         \tlatex-mathsymbols"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.tex",
+			"settings":
+			{
+				"buffer_size": 2649,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jjvv/Escritorio/latex to javascript/typescript-with-esm-no-babel-boilerplate/src/latex-grammar.pegjs",
+			"settings":
+			{
+				"buffer_size": 37211,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/my_latex.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				"PdfLaTeX"
+			]
+		],
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				],
+				[
+					"Packages/User/my_latex.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/my_latex.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"snippe",
+				"Snippet: Chapter"
+			],
+			[
+				"edit",
+				"Project: Edit Project"
+			],
+			[
+				"projec",
+				"Project: Save As"
+			],
+			[
+				"proje",
+				"Project: Add Folder"
+			],
+			[
+				"snippet: late",
+				"Snippet: Insert a LaTeX environment"
+			],
+			[
+				"auto",
+				"Auto Wrap: Toggle"
+			],
+			[
+				"snippetfi",
+				"Snippet: Figure"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Snippet: Listing"
+			],
+			[
+				"wr",
+				"Auto Wrap: Toggle"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"we",
+				"Auto Wrap: Toggle"
+			],
+			[
+				"wra",
+				"Auto Wrap: Toggle"
+			],
+			[
+				"instap",
+				"Package Control: Install Package"
+			],
+			[
+				"project",
+				"Project: Add Folder"
+			],
+			[
+				"keys",
+				"Preferences: Key Bindings"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"package coinsta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 151.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/jjvv/Escritorio/webook/book",
+		"/home/jjvv/Escritorio/webook/book/chapters"
+	],
+	"file_history":
+	[
+		"/home/jjvv/Escritorio/webook/book/chapters/Algebra_lineal_II/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Computo_cientifico_II/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Teoria_de_conjuntos/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Algebra_lineal_I/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Teoria_de_numeros/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Calculo_diferencial_multivariable/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Fundamentos_del_algebra/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Calculo_integral_en_una_variable_II/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Calculo_diferencial_de_una_variable/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Geometria_analitica_II/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Calculo_integral_multivariable/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Geometria_analitica_I/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Computo_cientifico_I/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Herramientas_y_software_matematico/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Geometria_y_algebra_lineal/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Geometria_euclidiana_II/index.tex",
+		"/home/jjvv/.config/sublime-text-3/Packages/User/my_latex.sublime-build",
+		"/home/jjvv/Escritorio/webook/book/chapters/Geometria_euclideana_I/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Calculo_integral_en_una_variable_I/index.tex",
+		"/home/jjvv/Escritorio/webook/book/file.tex",
+		"/home/jjvv/Escritorio/webook/book/book.sublime-project",
+		"/home/jjvv/Escritorio/webook/book/chapters/Fundamentos_de_la_matematica/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Geometria_euclidea_I/index.tex",
+		"/home/jjvv/Escritorio/webook/book/main.synctex.gz",
+		"/home/jjvv/Escritorio/webook/book/chapters/calculo/index.tex",
+		"/home/jjvv/Escritorio/webook/tmp/main.tex",
+		"/home/jjvv/Escritorio/webook/book/main.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/calculo/pdflatex45616.fls",
+		"/home/jjvv/Escritorio/webook/book/chapters/calculo/index.aux",
+		"/home/jjvv/Escritorio/Matematicas/main.tex",
+		"/home/jjvv/Escritorio/webook/index.js",
+		"/home/jjvv/Descargas/Westworld.S04E03.720p.WEB.H264-CAKES[rarbg]/westworld.s04e03.720p.web.h264-cakes.srt",
+		"/home/jjvv/Descargas/3265_3.mp4",
+		"/home/jjvv/Escritorio/Infocentro Figetel/main.tex",
+		"/home/jjvv/Escritorio/Infocentro Figetel/[no file]",
+		"/usr/share/texmf-dist/tex/latex/numprint/numprint.sty",
+		"/home/jjvv/Escritorio/Infocentro Figetel/main.bib",
+		"/home/jjvv/Escritorio/gant/gantt.tex",
+		"/home/jjvv/Descargas/3600_12.mp4",
+		"/home/jjvv/Escritorio/Infocentro Figetel/main.toc",
+		"/home/jjvv/Descargas/3598_12.mp4",
+		"/home/jjvv/Descargas/montserrat.sty",
+		"/home/jjvv/Descargas/Jerry And Marge Go Large (2022) [720p] [WEBRip] [YTS.MX]/Jerry.And.Marge.Go.Large.2022.720p.WEBRip.x264.AAC-[YTS.MX].srt",
+		"/home/jjvv/Escritorio/Freire/docker/docker-compose.yaml",
+		"/home/jjvv/Escritorio/Freire/android/app/build.gradle",
+		"/home/jjvv/Escritorio/Freire/android/gradle.properties",
+		"/home/jjvv/Descargas/3618_9.mp4",
+		"/home/jjvv/Descargas/Obi-Wan.Kenobi.S01E04.1080p.WEB.h264-KOGi[rarbg]/obi-wan.kenobi.s01e04.1080p.web.h264-kogi.nfo",
+		"/home/jjvv/Descargas/3595_9.mp4",
+		"/home/jjvv/Descargas/3612_3.mp4",
+		"/home/jjvv/Descargas/3612_4.mp4",
+		"/home/jjvv/Descargas/3612_5.mp4",
+		"/home/jjvv/Escritorio/kaobook/main.tex",
+		"/home/jjvv/Escritorio/kaobook/kaotheorems.sty",
+		"/home/jjvv/Escritorio/kaobook/commands.tex",
+		"/home/jjvv/Escritorio/kaobook/chapters/algebra_2.tex",
+		"/home/jjvv/Escritorio/tt.txt",
+		"/home/jjvv/Escritorio/kaobook/notas.sublime-project",
+		"/home/jjvv/Escritorio/kaobook/main.aux",
+		"/home/jjvv/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
+		"/home/jjvv/.config/sublime-text-3/Packages/LaTeXTools/LaTeX.sublime-completions",
+		"/home/jjvv/.config/sublime-text-3/Packages/LaTeXTools/LaTeX math.sublime-completions",
+		"/home/jjvv/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/jjvv/.config/sublime-text-3/Packages/LaTeXTools/Default (OSX).sublime-keymap.OLD"
+	],
+	"find":
+	{
+		"height": 42.0
+	},
+	"find_in_files":
+	{
+		"height": 108.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"_",
+			"index}",
+			"index",
+			"_",
+			"calculo_",
+			"240",
+			"senama"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2649,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1309,
+								1309
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 714.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/jjvv/Escritorio/latex to javascript/typescript-with-esm-no-babel-boilerplate/src/latex-grammar.pegjs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 37211,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								37211,
+								37211
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 17354.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 50.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 121.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.latextools":
+	{
+		"height": 259.0
+	},
+	"pinned_build_system": "",
+	"project": "book.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"comman",
+				"commands.tex"
+			],
+			[
+				"main.te",
+				"main.tex"
+			],
+			[
+				"ma",
+				"main.aux"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Escritorio/kaobook/notas.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 419.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

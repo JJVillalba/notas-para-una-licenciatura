@@ -6,20 +6,69 @@ import { JSDOM } from "jsdom";
 import { execSync } from "child_process";
 import { format } from "prettier";
 
+const MAKE_PDF = false;
+
+/**
+ * COMPILE PDF
+ */
+
+if (MAKE_PDF) {
+  await fs_extra.copy("./book", "./tmp", {});
+
+  execSync("cd ./tmp && pdflatex main.tex");
+
+  fs.copyFileSync("./tmp/main.pdf", "./output/main.pdf");
+}
+
+/**
+ * COMPILE HTML
+ */
+
+const latex = fs.readFileSync("./book/main.tex", { encoding: "utf-8" });
+
 global.window = createHTMLWindow();
 global.document = window.document;
 
-let latex = fs.readFileSync("./book/main.tex", { encoding: "utf-8" });
+const includeRegEx = /\\include{(.*?)}/g;
+const inputRegEx = /\\\\input{(.*?)}/g;
+const expanded = latex
+  // Replace Include
+  .replaceAll(includeRegEx, (match) => {
+    const path = match.replace("\\include{", "./book/").replace("}", "");
+    console.log(path);
 
-await fs_extra.copy("./book", "./tmp", {});
+    return fs.readFileSync(path, { encoding: "utf-8" });
+  })
+  // Replace Input
+  .replaceAll(inputRegEx, (match) => {
+    const path = match.replace("\\input{", "./book/").replace("}", "");
+    console.log(path);
 
-// execSync("cd ./tmp && pdflatex main.tex")
+    return fs.readFileSync(path, { encoding: "utf-8" });
+  });
 
-// fs.copyFileSync("./tmp/main.pdf", "./output/main.pdf")
+let generator = new HtmlGenerator({
+  hyphenate: true,
+  CustomMacros: (function () {
+    let args = (CustomMacros.args = {});
+    let prototype = CustomMacros.prototype;
 
-let generator = new HtmlGenerator({ hyphenate: true });
+    function CustomMacros(generator) {
+      this.generator = generator;
+    }
 
-let doc = parse(latex, { generator: generator }).htmlDocument();
+    args["htmlDiv"] = ["V", "i", "h"];
+    prototype["htmlDiv"] = function (className) {
+      let das = this.generator.create("div");
+      das.className = className
+      return [das]
+    };
+
+    return CustomMacros;
+  })(),
+});
+
+let doc = parse(expanded, { generator: generator }).htmlDocument();
 
 const dom = new JSDOM(doc.documentElement.outerHTML.replace("</meta>", ""));
 
