@@ -1,389 +1,877 @@
-<html
-  style="
-    --size: 13.284px;
-    --textwidth: 56.162%;
-    --marginleftwidth: 21.919%;
-    --marginrightwidth: 21.919%;
-    --marginparwidth: 48.892%;
-    --marginparsep: 14.612px;
-    --marginparpush: 6.642px;
-  "
->
-  <head>
-    <title>No­tas para una li­cen­ciatura</title>
-    <meta charset="UTF-8" />
-    <link type="text/css" rel="stylesheet" href="css/katex.css" />
-    <link type="text/css" rel="stylesheet" href="css/book.css" />
-    <script src="js/base.js"></script>
-  </head>
-  <body>
-    <div class="body">
-      <div class="list center">
-        <span class="vspace" style="margin-bottom: 2em"></span>
-        <div class="title">No­tas para una li­cen­ciatura</div>
-        <span class="vspace" style="margin-bottom: 1.5em"></span>
-        <div class="author">José Julián Vil­lalba Vásquez</div>
-        <span class="vspace" style="margin-bottom: 1em"></span>
-        <div class="date">Tues­day, July 19, 2022</div>
-        <span class="vspace" style="margin-bottom: 1.5em"></span>
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link type="text/css" rel="stylesheet" href="output/css/base.css">
+     <link type="text/css" rel="stylesheet" href="output/katex/katex.min.css">
+     <title>Notas</title>
+ </head>
+ <body>
+    <header>
+      <div class="title">
+        <h1>Matemáticas</h1>
+        <h3>Notas para una licenciatura</h3>
       </div>
-      <part id="sec-1">I Primer trimestre</part>
-      <div class="newPage">
-        <h1 id="sec-2">
-          <div>Chap­ter 1</div>
-          Fun­da­men­tos de las maté­mat­i­cas
-        </h1>
-        <p>
-          <span class="katex-display"
-            ><span class="katex"
-              ><span class="katex-mathml"
-                ><math
-                  ><semantics
+      <h2>José Julián Villalba Vásquez</h2>
+    </header>
+    <main>
+        <p><span class="macro macro-maketitle"></span></p>
+<p>
+  Esta introducción, como casi todas, ha pasado por varios re-escrituras si
+  llevo bien la cuenta, esta debería ser la cuarta, un cambio de enfoque, un
+  cambio de trabajo y un cambio de universidad han sido los motivos principales,
+  y creo que cada uno a dejado su impronta en el tono de lo que aquí esta
+  escrito, aportando un poco cada una a lo que son y representan estas notas.
+</p>
+<p>
+  Empece a escribir esto mientras estudiaba matemáticas en la USB, al principio
+  por el entusiasmo de haber aprendido <span class="macro macro-LaTeX"></span> y
+  la triste realidad de que mi letra deja mucho que desear, tomaba un libro y
+  transcribía teoremas, pruebas y definiciones y en proceso me los iba
+  memorizando, además de quedarme unas bonitas notas que luego revisar y
+  compartir. Después de hacer esto con un par de libros me di cuenta de que
+  tenía ya bastante material, y empecé a agregar pequeñas notas entre los
+  teoremas y definiciones, notas históricas, pequeñas explicaciones, y poquito a
+  poquito lo que empezó como un seco conjunto de notas, se volvió algo mucho mas
+  interesante, esta fue la primera reescritura. Ya un tiempo después, medio
+  peleado con la universidad tome un trabajo como programador y aprendí las
+  arcanas artes de la programación web me convencí de que tenía que hacer mi
+  libro accesible desde la web, que podía de agregar contenido interactivo y
+  mejorar la presentación, que el contenido de lo merecía y podía, esto supuso
+  una segunda reescritura. Finalmente y en la etapa en la que me encuentro al
+  escribir esta cuarta introducción decidí cambiar de universidad, y en el
+  ínterin también se me daño mi computadora, así que una nueva reescritura se
+  hizo necesaria, una que como nuevo elemento introduce que ya por fin me decidí
+  a publicar esto.
+</p>
+<p>
+  Así hay algunas cosas importantes que señalar, este trabajo es por sobretodo
+  <em class="emph">amateur</em> hecha por amor al contenido, con seriedad si,
+  pero con poco profesionalismo, nadie a verificado este trabajo, y por tanto
+  advierto a todos mis incautos lectores que lo que lean a pesar de mis mejores
+  esfuerzos puede estar plagado de mentiras. Con esto no espero asustar a nadie,
+  de verdad no creo que las situación sea tan mala, pero para leer este texto
+  hace falta tener siempre en mente que fue escrito por un
+  <em class="emph">estudiante mientras estudiaba</em> y eso tiene sus riesgos.
+  También invito a quien descubra algún error, impresión o tenga alguna
+  sugerencia a hacérmelo saber, el código fuente del libro esta publicado en
+  github (), donde puedes abrir un “Issue” con las observaciones que creas
+  pertinentes, con gusto las revisare.
+</p>
+<p>
+  Es posible que te hayas dado cuenta de que el indice del libro esta
+  incompleto, e incluso te pudo haber hecho gracia lo ambicioso del proyecto, a
+  mí me lo hace cada cierto tiempo, pero es que este libro es, y siempre sera un
+  proyecto incompleto, hace un rato acepte su naturaleza, y ahora ya solo sigo
+  con ella, tal vez en el mismo espíritu que Donald Knut con
+  <span class="macro macro-TeX"></span>, y es que este libro es un diario
+  intelectual cuyos horizontes se van expandiendo en la misma medida, que voy
+  descubriendo nuevas temas. Y como diario también es algo muy personal, así que
+  por favor no te asustes si consigues algo que no tiene nada ver con el tema,
+  algún poema, canción o vídeo puede que se te atraviese de cuando en vez sin
+  mucha relación con el tema, aunque intento que esto se mantenga en las notas a
+  al margen del libro.
+</p>
+<h1>Primer trimestre</h1>
+<h2>Fundamentos de las matématicas</h2>
+<p>
+  <span class="macro macro-label" id="cha:fundamentos-de-las-matematicas"
+    >{cha:fundamentos-de-las-matematicas}</span
+  >
+</p>
+<div class="display-math">
+  <span class="katex-display fleqn"
+    ><span class="katex"
+      ><span class="katex-mathml"
+        ><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+          ><semantics
+            ><mtable rowspacing="0.16em" columnspacing="1em"
+              ><mtr
+                ><mtd class="mtr-glue"></mtd
+                ><mtd
+                  ><mstyle scriptlevel="0" displaystyle="true"
                     ><mrow
-                      ><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup
-                      ><mi>x</mi><mi mathvariant="double-struck">Q</mi></mrow
-                    ><annotation encoding="application/x-tex">
-                      \int_0^1 x \mathbb{Q}
-                    </annotation></semantics
-                  ></math
+                      ><msubsup><mo>∫</mo><mn>0</mn><mi>a</mi></msubsup
+                      ><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi
+                      ><mo stretchy="false">)</mo><mtext>  </mtext><mi>d</mi
+                      ><mi>x</mi></mrow
+                    ></mstyle
+                  ></mtd
+                ><mtd class="mtr-glue"></mtd
+                ><mtd class="mml-eqn-num"></mtd></mtr></mtable
+            ><annotation encoding="application/x-tex"
+              >\begin{equation}\int_{0}^{a}f(x) \; d x\end{equation}</annotation
+            ></semantics
+          ></math
+        ></span
+      ><span class="katex-html" aria-hidden="true"
+        ><span class="base"
+          ><span
+            class="strut"
+            style="height: 2.3262em; vertical-align: -0.9131em"
+          ></span
+          ><span class="mtable"
+            ><span class="col-align-c"
+              ><span class="vlist-t vlist-t2"
+                ><span class="vlist-r"
+                  ><span class="vlist" style="height: 1.4131em"
+                    ><span style="top: -3.4131em"
+                      ><span class="pstrut" style="height: 3.4143em"></span
+                      ><span class="mord"
+                        ><span class="mop"
+                          ><span
+                            class="mop op-symbol large-op"
+                            style="
+                              margin-right: 0.44445em;
+                              position: relative;
+                              top: -0.0011em;
+                            "
+                            >∫</span
+                          ><span class="msupsub"
+                            ><span class="vlist-t vlist-t2"
+                              ><span class="vlist-r"
+                                ><span class="vlist" style="height: 1.4143em"
+                                  ><span
+                                    style="
+                                      top: -1.7881em;
+                                      margin-left: -0.4445em;
+                                      margin-right: 0.05em;
+                                    "
+                                    ><span
+                                      class="pstrut"
+                                      style="height: 2.7em"
+                                    ></span
+                                    ><span
+                                      class="sizing reset-size6 size3 mtight"
+                                      ><span class="mord mtight"
+                                        ><span class="mord mtight"
+                                          >0</span
+                                        ></span
+                                      ></span
+                                    ></span
+                                  ><span
+                                    style="top: -3.8129em; margin-right: 0.05em"
+                                    ><span
+                                      class="pstrut"
+                                      style="height: 2.7em"
+                                    ></span
+                                    ><span
+                                      class="sizing reset-size6 size3 mtight"
+                                      ><span class="mord mtight"
+                                        ><span class="mord mathnormal mtight"
+                                          >a</span
+                                        ></span
+                                      ></span
+                                    ></span
+                                  ></span
+                                ><span class="vlist-s">​</span></span
+                              ><span class="vlist-r"
+                                ><span class="vlist" style="height: 0.9119em"
+                                  ><span></span></span></span></span></span></span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.1667em"
+                        ></span
+                        ><span
+                          class="mord mathnormal"
+                          style="margin-right: 0.10764em"
+                          >f</span
+                        ><span class="mopen">(</span
+                        ><span class="mord mathnormal">x</span
+                        ><span class="mclose">)</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2778em"
+                        ></span
+                        ><span class="mord mathnormal">d</span
+                        ><span class="mord mathnormal">x</span></span
+                      ></span
+                    ></span
+                  ><span class="vlist-s">​</span></span
+                ><span class="vlist-r"
+                  ><span class="vlist" style="height: 0.9131em"
+                    ><span></span></span></span></span></span></span></span
+        ><span class="tag"
+          ><span class="vlist-t vlist-t2"
+            ><span class="vlist-r"
+              ><span class="vlist" style="height: 1.4131em"
+                ><span style="top: -3.4131em"
+                  ><span class="pstrut" style="height: 3.4143em"></span
+                  ><span class="eqn-num"></span></span></span
+              ><span class="vlist-s">​</span></span
+            ><span class="vlist-r"
+              ><span class="vlist" style="height: 0.9131em"
+                ><span></span></span></span></span></span></span></span
+  ></span>
+</div>
+<h2>Cálculo diferencial de una variable</h2>
+<p>
+  <span class="macro macro-label" id="cha:calculo-diferencial-de-una-variable"
+    >{cha:calculo-diferencial-de-una-variable}</span
+  >
+</p>
+<h2>Geometría euclidiana I</h2>
+<p>
+  <span class="macro macro-label" id="cha:geometria-euclidiana-i"
+    >{cha:geometria-euclidiana-i}</span
+  >
+</p>
+<h1>Segundo trimestre</h1>
+<h2>Calculo integral en una variable I</h2>
+<p>
+  <span class="macro macro-label" id="cha:calculo-integral-en-una-variable-i"
+    >{cha:calculo-integral-en-una-variable-i}</span
+  >
+</p>
+<h2>Geometria euclidiana II</h2>
+<p>
+  <span class="macro macro-label" id="cha:geometria-euclidiana-ii"
+    >{cha:geometria-euclidiana-ii}</span
+  >
+</p>
+<h2>Geometría y álgebra lineal</h2>
+<p>
+  <span class="macro macro-label" id="cha:geometria-y-algebra-lineal"
+    >{cha:geometria-y-algebra-lineal}</span
+  >
+</p>
+<h1>Tercer trimestre</h1>
+<h2>Geometria proyectiva y no euclidea</h2>
+<p>
+  <span class="macro macro-label" id="cha:geometria-proyectiva-y-no-euclidea"
+    >{cha:geometria-proyectiva-y-no-euclidea}</span
+  >
+</p>
+<h2>Cálculo integral en una variable II</h2>
+<p>
+  <span class="macro macro-label" id="cha:calculo-integral-en-una-variable-ii"
+    >{cha:calculo-integral-en-una-variable-ii}</span
+  >
+</p>
+<h2>Herramientas y software matemático</h2>
+<p>
+  <span class="macro macro-label" id="cha:herramientas-y-software-matematico"
+    >{cha:herramientas-y-software-matematico}</span
+  >
+</p>
+<h2>Fundamentos del álgebra</h2>
+<p>
+  <span class="macro macro-label" id="cha:fundamentos-del-algebra"
+    >{cha:fundamentos-del-algebra}</span
+  >
+</p>
+<h1>Cuarto trimestre</h1>
+<h2>Teoría de números</h2>
+<p>
+  <span class="macro macro-label" id="cha:teoria-de-numeros"
+    >{cha:teoria-de-numeros}</span
+  >
+</p>
+<h2>Cálculo diferencial multivariable</h2>
+<p>
+  <span class="macro macro-label" id="cha:calculo-diferencial-multivariable"
+    >{cha:calculo-diferencial-multivariable}</span
+  >
+</p>
+<h2>Computo científico I</h2>
+<p>
+  <span class="macro macro-label" id="cha:computo-cientifico-i"
+    >{cha:computo-cientifico-i}</span
+  >
+</p>
+<h2>Geometría analítica I</h2>
+<p>
+  <span class="macro macro-label" id="cha:geometria-analitica-i"
+    >{cha:geometria-analitica-i}</span
+  >
+</p>
+<h1>Quinto trimestre</h1>
+<h2>Cálculo integral multivariable</h2>
+<p>
+  <span class="macro macro-label" id="cha:calculod-integrald-multivariable"
+    >{cha:calculod-integrald-multivariable}</span
+  >
+</p>
+<h2>Geometría analítica II</h2>
+<p>
+  <span class="macro macro-label" id="cha:geometria-analitica-ii"
+    >{cha:geometria-analitica-ii}</span
+  >
+</p>
+<h2>Álgebra lineal I</h2>
+<p>
+  <span class="macro macro-label" id="cha:algebra_lineal_i"
+    >{cha:algebra_lineal_i}</span
+  >
+</p>
+<div class="environment definition">
+  <span class="macro macro-HTMLclassTitle">Espacio vectorial</span> Sea
+  <span class="inline-math"
+    ><span class="katex"
+      ><span class="katex-mathml"
+        ><math xmlns="http://www.w3.org/1998/Math/MathML"
+          ><semantics
+            ><mrow><mi mathvariant="double-struck">F</mi></mrow
+            ><annotation encoding="application/x-tex">\F</annotation></semantics
+          ></math
+        ></span
+      ><span class="katex-html" aria-hidden="true"
+        ><span class="base"
+          ><span class="strut" style="height: 0.6889em"></span
+          ><span class="mord mathbb">F</span></span
+        ></span
+      ></span
+    ></span
+  >
+  un conjunto de escalares (usualmente
+  <span class="inline-math"
+    ><span class="katex"
+      ><span class="katex-mathml"
+        ><math xmlns="http://www.w3.org/1998/Math/MathML"
+          ><semantics
+            ><mrow><mi mathvariant="double-struck">R</mi></mrow
+            ><annotation encoding="application/x-tex">\R</annotation></semantics
+          ></math
+        ></span
+      ><span class="katex-html" aria-hidden="true"
+        ><span class="base"
+          ><span class="strut" style="height: 0.6889em"></span
+          ><span class="mord mathbb">R</span></span
+        ></span
+      ></span
+    ></span
+  >
+  o
+  <span class="inline-math"
+    ><span class="katex"
+      ><span class="katex-mathml"
+        ><math xmlns="http://www.w3.org/1998/Math/MathML"
+          ><semantics
+            ><mrow><mi mathvariant="double-struck">C</mi></mrow
+            ><annotation encoding="application/x-tex">\C</annotation></semantics
+          ></math
+        ></span
+      ><span class="katex-html" aria-hidden="true"
+        ><span class="base"
+          ><span class="strut" style="height: 0.6889em"></span
+          ><span class="mord mathbb">C</span></span
+        ></span
+      ></span
+    ></span
+  >) y sea V un conjunto con dos operaciones llamadas
+  <b class="textbf">addición</b> y <b class="textbf">adición escalar</b>.
+  Representamos la adición de
+  <span class="inline-math"
+    ><span class="katex"
+      ><span class="katex-mathml"
+        ><math xmlns="http://www.w3.org/1998/Math/MathML"
+          ><semantics
+            ><mrow
+              ><mover accent="true"><mi>a</mi><mo>⃗</mo></mover></mrow
+            ><annotation encoding="application/x-tex"
+              >\vec{a}</annotation
+            ></semantics
+          ></math
+        ></span
+      ><span class="katex-html" aria-hidden="true"
+        ><span class="base"
+          ><span class="strut" style="height: 0.714em"></span
+          ><span class="mord accent"
+            ><span class="vlist-t"
+              ><span class="vlist-r"
+                ><span class="vlist" style="height: 0.714em"
+                  ><span style="top: -3em"
+                    ><span class="pstrut" style="height: 3em"></span
+                    ><span class="mord mathnormal">a</span></span
+                  ><span style="top: -3em"
+                    ><span class="pstrut" style="height: 3em"></span
+                    ><span class="accent-body" style="left: -0.2355em"
+                      ><span
+                        class="overlay"
+                        style="height: 0.714em; width: 0.471em"
+                        ><svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="0.471em"
+                          height="0.714em"
+                          style="width: 0.471em"
+                          viewBox="0 0 471 714"
+                          preserveAspectRatio="xMinYMin"
+                        >
+                          <path
+                            d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"
+                          ></path></svg></span></span></span></span></span></span></span></span></span></span></span
+  ><br />
+  <ol class="enumerate">
+    <li>
+      <p>
+        <span class="inline-math"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                ><semantics
+                  ><mrow
+                    ><mover accent="true"><mi>a</mi><mo>⃗</mo></mover
+                    ><mo>+</mo><mover accent="true"><mi>b</mi><mo>⃗</mo></mover
+                    ><mo>∈</mo><mi>V</mi></mrow
+                  ><annotation encoding="application/x-tex"
+                    >\vec{a}+ \vec{b}\in V</annotation
+                  ></semantics
+                ></math
+              ></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.7973em; vertical-align: -0.0833em"
                 ></span
-              ><span class="katex-html" aria-hidden="true"
-                ><span class="base"
-                  ><span
-                    class="strut"
-                    style="
-                      height: 2.4759580000000003em;
-                      vertical-align: -0.9119499999999999em;
-                    "
-                  ></span
-                  ><span class="mop"
-                    ><span
-                      style="
-                        margin-right: 0.44445em;
-                        position: relative;
-                        top: -0.0011249999999999316em;
-                      "
-                      class="mop op-symbol large-op"
-                      >∫</span
-                    ><span class="msupsub"
-                      ><span class="vlist-t vlist-t2"
-                        ><span class="vlist-r"
-                          ><span
-                            class="vlist"
-                            style="height: 1.5640080000000003em"
+                ><span class="mord accent"
+                  ><span class="vlist-t"
+                    ><span class="vlist-r"
+                      ><span class="vlist" style="height: 0.714em"
+                        ><span style="top: -3em"
+                          ><span class="pstrut" style="height: 3em"></span
+                          ><span class="mord mathnormal">a</span></span
+                        ><span style="top: -3em"
+                          ><span class="pstrut" style="height: 3em"></span
+                          ><span class="accent-body" style="left: -0.2355em"
                             ><span
-                              class=""
-                              style="
-                                top: -1.7880500000000001em;
-                                margin-left: -0.44445em;
-                                margin-right: 0.05em;
-                              "
-                              ><span class="pstrut" style="height: 2.7em"></span
-                              ><span class="sizing reset-size6 size3 mtight"
-                                ><span class="mord mtight">0</span></span
-                              ></span
+                              class="overlay"
+                              style="height: 0.714em; width: 0.471em"
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="0.471em"
+                                height="0.714em"
+                                style="width: 0.471em"
+                                viewBox="0 0 471 714"
+                                preserveAspectRatio="xMinYMin"
+                              >
+                                <path
+                                  d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"
+                                ></path></svg></span></span></span></span></span></span></span
+                ><span class="mspace" style="margin-right: 0.2222em"></span
+                ><span class="mbin">+</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.2222em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 1.0165em; vertical-align: -0.0391em"
+                ></span
+                ><span class="mord accent"
+                  ><span class="vlist-t"
+                    ><span class="vlist-r"
+                      ><span class="vlist" style="height: 0.9774em"
+                        ><span style="top: -3em"
+                          ><span class="pstrut" style="height: 3em"></span
+                          ><span class="mord mathnormal">b</span></span
+                        ><span style="top: -3.2634em"
+                          ><span class="pstrut" style="height: 3em"></span
+                          ><span class="accent-body" style="left: -0.2355em"
                             ><span
-                              class=""
-                              style="
-                                top: -3.8129000000000004em;
-                                margin-right: 0.05em;
-                              "
-                              ><span class="pstrut" style="height: 2.7em"></span
-                              ><span class="sizing reset-size6 size3 mtight"
-                                ><span class="mord mtight">1</span></span
-                              ></span
-                            ></span
-                          ><span class="vlist-s">​</span></span
-                        ><span class="vlist-r"
-                          ><span
-                            class="vlist"
-                            style="height: 0.9119499999999999em"
-                            ><span
-                              class=""
-                            ></span></span></span></span></span></span
-                  ><span
-                    class="mspace"
-                    style="margin-right: 0.16666666666666666em"
-                  ></span
-                  ><span class="mord mathdefault">x</span
-                  ><span class="mord"
-                    ><span class="mord mathbb">Q</span></span
-                  ></span
+                              class="overlay"
+                              style="height: 0.714em; width: 0.471em"
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="0.471em"
+                                height="0.714em"
+                                style="width: 0.471em"
+                                viewBox="0 0 471 714"
+                                preserveAspectRatio="xMinYMin"
+                              >
+                                <path
+                                  d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"
+                                ></path></svg></span></span></span></span></span></span></span
+                ><span class="mspace" style="margin-right: 0.2778em"></span
+                ><span class="mrel">∈</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.2778em"
+                ></span></span
+              ><span class="base"
+                ><span class="strut" style="height: 0.6833em"></span
+                ><span class="mord mathnormal" style="margin-right: 0.22222em"
+                  >V</span
                 ></span
               ></span
             ></span
-          >
-        </p>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-3">
-          <div>Chap­ter 2</div>
-          Cál­culo difer­en­cial de una vari­able
-        </h1>
-        <p>
-          Lorem ip­sum do­lor sit amet, con­secte­tur adip­isic­ing elit, sed do
-          eius­mod tem­por in­ci­didunt ut la­bore et do­lore magna ali­qua. Ut
-          enim ad minim ve­niam, quis nos­trud ex­erci­ta­tion ul­lamco la­boris
-          nisi ut aliquip ex ea com­modo con­se­quat. Duis aute irure do­lor in
-          rep­re­hen­derit in volup­tate velit esse cil­lum do­lore eu fu­giat
-          nulla pariatur. Ex­cep­teur sint oc­cae­cat cu­p­i­datat non proident,
-          sunt in culpa qui oﬃcia de­serunt mol­lit anim id est labo­rum.
-        </p>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-4">
-          <div>Chap­ter 3</div>
-          Geometría eu­clid­i­ana I
-        </h1>
-      </div>
-      <part id="sec-5">II Se­gundo trimestre</part>
-      <div class="newPage">
-        <h1 id="sec-6">
-          <div>Chap­ter 4</div>
-          Cal­culo in­te­gral en una vari­able I
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-7">
-          <div>Chap­ter 5</div>
-          Geome­tria eu­clid­i­ana II
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-8">
-          <div>Chap­ter 6</div>
-          Geometría y ál­ge­bra lin­eal
-        </h1>
-      </div>
-      <part id="sec-9">III Ter­cer trimestre</part>
-      <div class="newPage">
-        <h1 id="sec-10">
-          <div>Chap­ter 7</div>
-          Geome­tria proyec­tiva y no eu­clidea
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-11">
-          <div>Chap­ter 8</div>
-          Cál­culo in­te­gral en una vari­able II
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-12">
-          <div>Chap­ter 9</div>
-          Her­ramien­tas y soft­ware matemático
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-13">
-          <div>Chap­ter 10</div>
-          Fun­da­men­tos del ál­ge­bra
-        </h1>
-      </div>
-      <part id="sec-14">IV Cuarto trimestre</part>
-      <div class="newPage">
-        <h1 id="sec-15">
-          <div>Chap­ter 11</div>
-          Teoría de números
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-16">
-          <div>Chap­ter 12</div>
-          Cál­culo difer­en­cial mul­ti­vari­able
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-17">
-          <div>Chap­ter 13</div>
-          Com­puto cientíﬁco I
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-18">
-          <div>Chap­ter 14</div>
-          Geometría analítica I
-        </h1>
-      </div>
-      <part id="sec-19">V Quinto trimestre</part>
-      <div class="newPage">
-        <h1 id="sec-20">
-          <div>Chap­ter 15</div>
-          Cál­culo in­te­gral mul­ti­vari­able
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-21">
-          <div>Chap­ter 16</div>
-          Geometría analítica II
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-22">
-          <div>Chap­ter 17</div>
-          Ál­ge­bra lin­eal I
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-23">
-          <div>Chap­ter 18</div>
-          Com­puto cientíﬁco II
-        </h1>
-      </div>
-      <part id="sec-24">VI Sexto trimestre</part>
-      <div class="newPage">
-        <h1 id="sec-25">
-          <div>Chap­ter 19</div>
-          Teoría de con­jun­tos
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-26">
-          <div>Chap­ter 20</div>
-          Al­ge­bra lin­eal II
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-27">
-          <div>Chap­ter 21</div>
-          Matemáti­cas disc­re­tas
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-28">
-          <div>Chap­ter 22</div>
-          Topolo­gia I
-        </h1>
-      </div>
-      <part id="sec-29">VII Sép­timo trimestre</part>
-      <div class="newPage">
-        <h1 id="sec-30">
-          <div>Chap­ter 23</div>
-          Análi­sis real I
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-31">
-          <div>Chap­ter 24</div>
-          Teoría de gru­pos
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-32">
-          <div>Chap­ter 25</div>
-          Com­bi­na­to­ria
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-33">
-          <div>Chap­ter 26</div>
-          Al­go­rit­mos y es­truc­turas I
-        </h1>
-      </div>
-      <part id="sec-34">VIII Oc­tavo trimestre</part>
-      <div class="newPage">
-        <h1 id="sec-35">
-          <div>Chap­ter 27</div>
-          Ecua­ciones difer­en­ciales or­di­nar­ias
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-36">
-          <div>Chap­ter 28</div>
-          Anal­i­sis real II
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-37">
-          <div>Chap­ter 29</div>
-          Prob­a­bil­i­dades
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-38">
-          <div>Chap­ter 30</div>
-          Topolo­gia II
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-39">
-          <div>Chap­ter 31</div>
-          Meto­dos nu­meri­cos
-        </h1>
-      </div>
-      <part id="sec-40">IX Noveno trimestre</part>
-      <div class="newPage">
-        <h1 id="sec-41">
-          <div>Chap­ter 32</div>
-          Al­go­rit­mos y es­truc­turas‐II
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-42">
-          <div>Chap­ter 33</div>
-          Anal­i­sis en varias vari­ables
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-43">
-          <div>Chap­ter 34</div>
-          Teo­ria de anil­los
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-44">
-          <div>Chap­ter 35</div>
-          Es­tadis­tica
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-45">
-          <div>Chap­ter 36</div>
-          Pro­ce­sos es­to­cas­ti­cos
-        </h1>
-      </div>
-      <part id="sec-46">X Décimo trimestre</part>
-      <div class="newPage">
-        <h1 id="sec-47">
-          <div>Chap­ter 37</div>
-          Geome­tria difer­en­cial
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-48">
-          <div>Chap­ter 38</div>
-          Anal­i­sis com­plejo
-        </h1>
-      </div>
-      <part id="sec-49">XI On­ceavo trimestre</part>
-      <div class="newPage">
-        <h1 id="sec-50">
-          <div>Chap­ter 39</div>
-          Teo­ria de la me­dida
-        </h1>
-      </div>
-      <part id="sec-51">XII Do­ceavo trimestre</part>
-      <div class="newPage">
-        <h1 id="sec-52">
-          <div>Chap­ter 40</div>
-          Anal­i­sis ar­mon­ico
-        </h1>
-      </div>
-      <part id="sec-53">XIII Tre­ceavo trimestre</part
-      ><part id="sec-54">XIV Catorceavo trimestre</part>
-      <div class="newPage">
-        <h1 id="sec-55">
-          <div>Chap­ter 41</div>
-          Anal­i­sis fun­cional
-        </h1>
-      </div>
-      <div class="newPage">
-        <h1 id="sec-56">
-          <div>Chap­ter 42</div>
-          Ecua­ciones difer­n­ciales par­ciales
-        </h1>
-      </div>
-      <part id="sec-57">XV Quinceavo trimestre</part>
-    </div>
-  </body>
-</html>
+          ></span
+        >
+      </p>
+    </li>
+    <li>
+      <p>
+        <span class="inline-math"
+          ><span class="katex"
+            ><span class="katex-mathml"
+              ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                ><semantics
+                  ><mrow
+                    ><mover accent="true"><mi>v</mi><mo>⃗</mo></mover
+                    ><mo>+</mo><mover accent="true"><mi>w</mi><mo>⃗</mo></mover
+                    ><mo>=</mo><mover accent="true"><mi>w</mi><mo>⃗</mo></mover
+                    ><mo>+</mo
+                    ><mover accent="true"><mi>v</mi><mo>⃗</mo></mover></mrow
+                  ><annotation encoding="application/x-tex"
+                    >\vec{v}+ \vec{w}= \vec{w}+ \vec{v}</annotation
+                  ></semantics
+                ></math
+              ></span
+            ><span class="katex-html" aria-hidden="true"
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.7973em; vertical-align: -0.0833em"
+                ></span
+                ><span class="mord accent"
+                  ><span class="vlist-t"
+                    ><span class="vlist-r"
+                      ><span class="vlist" style="height: 0.714em"
+                        ><span style="top: -3em"
+                          ><span class="pstrut" style="height: 3em"></span
+                          ><span
+                            class="mord mathnormal"
+                            style="margin-right: 0.03588em"
+                            >v</span
+                          ></span
+                        ><span style="top: -3em"
+                          ><span class="pstrut" style="height: 3em"></span
+                          ><span class="accent-body" style="left: -0.2077em"
+                            ><span
+                              class="overlay"
+                              style="height: 0.714em; width: 0.471em"
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="0.471em"
+                                height="0.714em"
+                                style="width: 0.471em"
+                                viewBox="0 0 471 714"
+                                preserveAspectRatio="xMinYMin"
+                              >
+                                <path
+                                  d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"
+                                ></path></svg></span></span></span></span></span></span></span
+                ><span class="mspace" style="margin-right: 0.2222em"></span
+                ><span class="mbin">+</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.2222em"
+                ></span></span
+              ><span class="base"
+                ><span class="strut" style="height: 0.714em"></span
+                ><span class="mord accent"
+                  ><span class="vlist-t"
+                    ><span class="vlist-r"
+                      ><span class="vlist" style="height: 0.714em"
+                        ><span style="top: -3em"
+                          ><span class="pstrut" style="height: 3em"></span
+                          ><span
+                            class="mord mathnormal"
+                            style="margin-right: 0.02691em"
+                            >w</span
+                          ></span
+                        ><span style="top: -3em"
+                          ><span class="pstrut" style="height: 3em"></span
+                          ><span class="accent-body" style="left: -0.1522em"
+                            ><span
+                              class="overlay"
+                              style="height: 0.714em; width: 0.471em"
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="0.471em"
+                                height="0.714em"
+                                style="width: 0.471em"
+                                viewBox="0 0 471 714"
+                                preserveAspectRatio="xMinYMin"
+                              >
+                                <path
+                                  d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"
+                                ></path></svg></span></span></span></span></span></span></span
+                ><span class="mspace" style="margin-right: 0.2778em"></span
+                ><span class="mrel">=</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.2778em"
+                ></span></span
+              ><span class="base"
+                ><span
+                  class="strut"
+                  style="height: 0.7973em; vertical-align: -0.0833em"
+                ></span
+                ><span class="mord accent"
+                  ><span class="vlist-t"
+                    ><span class="vlist-r"
+                      ><span class="vlist" style="height: 0.714em"
+                        ><span style="top: -3em"
+                          ><span class="pstrut" style="height: 3em"></span
+                          ><span
+                            class="mord mathnormal"
+                            style="margin-right: 0.02691em"
+                            >w</span
+                          ></span
+                        ><span style="top: -3em"
+                          ><span class="pstrut" style="height: 3em"></span
+                          ><span class="accent-body" style="left: -0.1522em"
+                            ><span
+                              class="overlay"
+                              style="height: 0.714em; width: 0.471em"
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="0.471em"
+                                height="0.714em"
+                                style="width: 0.471em"
+                                viewBox="0 0 471 714"
+                                preserveAspectRatio="xMinYMin"
+                              >
+                                <path
+                                  d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"
+                                ></path></svg></span></span></span></span></span></span></span
+                ><span class="mspace" style="margin-right: 0.2222em"></span
+                ><span class="mbin">+</span
+                ><span
+                  class="mspace"
+                  style="margin-right: 0.2222em"
+                ></span></span
+              ><span class="base"
+                ><span class="strut" style="height: 0.714em"></span
+                ><span class="mord accent"
+                  ><span class="vlist-t"
+                    ><span class="vlist-r"
+                      ><span class="vlist" style="height: 0.714em"
+                        ><span style="top: -3em"
+                          ><span class="pstrut" style="height: 3em"></span
+                          ><span
+                            class="mord mathnormal"
+                            style="margin-right: 0.03588em"
+                            >v</span
+                          ></span
+                        ><span style="top: -3em"
+                          ><span class="pstrut" style="height: 3em"></span
+                          ><span class="accent-body" style="left: -0.2077em"
+                            ><span
+                              class="overlay"
+                              style="height: 0.714em; width: 0.471em"
+                              ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="0.471em"
+                                height="0.714em"
+                                style="width: 0.471em"
+                                viewBox="0 0 471 714"
+                                preserveAspectRatio="xMinYMin"
+                              >
+                                <path
+                                  d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"
+                                ></path></svg></span></span></span></span></span></span></span></span></span></span
+        ></span>
+      </p>
+    </li>
+  </ol>
+</div>
+<h2>Computo científico II</h2>
+<p>
+  <span class="macro macro-label" id="cha:computo-cientifico-ii"
+    >{cha:computo-cientifico-ii}</span
+  >
+</p>
+<h1>Sexto trimestre</h1>
+<h2>Teoría de conjuntos</h2>
+<p>
+  <span class="macro macro-label" id="cha:teoria_de_conjuntos"
+    >{cha:teoria_de_conjuntos}</span
+  >
+  <a href="#cha:analisis_real_i">ref</a>
+</p>
+<h2>Algebra lineal II</h2>
+<p>
+  <span class="macro macro-label" id="cha:algebra-lineal-ii"
+    >{cha:algebra-lineal-ii}</span
+  >
+</p>
+<h2>Matemáticas discretas</h2>
+<p>
+  <span class="macro macro-label" id="cha:matematicas-discretas"
+    >{cha:matematicas-discretas}</span
+  >
+</p>
+<h2>Topologia I</h2>
+<p>
+  <span class="macro macro-label" id="cha:topologia-i">{cha:topologia-i}</span>
+</p>
+<h1>Séptimo trimestre</h1>
+<h2>Análisis real I</h2>
+<p>
+  <span class="macro macro-label" id="cha:analisis_real_i"
+    >{cha:analisis_real_i}</span
+  >
+</p>
+<h2>Teoría de grupos</h2>
+<p>
+  <span class="macro macro-label" id="cha:teoria-de-grupos"
+    >{cha:teoria-de-grupos}</span
+  >
+</p>
+<h2>Combinatoria</h2>
+<p>
+  <span class="macro macro-label" id="cha:combinatoria"
+    >{cha:combinatoria}</span
+  >
+</p>
+<h2>Algoritmos y estructuras I</h2>
+<p>
+  <span class="macro macro-label" id="cha:algoritmos-y-estructuras"
+    >{cha:algoritmos-y-estructuras}</span
+  >
+</p>
+<h1>Octavo trimestre</h1>
+<h2>Ecuaciones diferenciales ordinarias</h2>
+<p>
+  <span class="macro macro-label" id="cha:ecuaciones-diferenciales-ordinarias"
+    >{cha:ecuaciones-diferenciales-ordinarias}</span
+  >
+</p>
+<h2>Analisis real II</h2>
+<p>
+  <span class="macro macro-label" id="cha:analisis-real-ii"
+    >{cha:analisis-real-ii}</span
+  >
+</p>
+<h2>Probabilidades</h2>
+<p>
+  <span class="macro macro-label" id="cha:probabilidades"
+    >{cha:probabilidades}</span
+  >
+</p>
+<h2>Topologia II</h2>
+<p>
+  <span class="macro macro-label" id="cha:topologia-ii"
+    >{cha:topologia-ii}</span
+  >
+</p>
+<h2>Metodos numericos</h2>
+<p>
+  <span class="macro macro-label" id="cha:metodos-numericos"
+    >{cha:metodos-numericos}</span
+  >
+</p>
+<h1>Noveno trimestre</h1>
+<h2>Algoritmos y estructuras-II</h2>
+<p>
+  <span class="macro macro-label" id="cha:algoritmos-y-estructuras-ii"
+    >{cha:algoritmos-y-estructuras-ii}</span
+  >
+</p>
+<h2>Analisis en varias variables</h2>
+<p>
+  <span class="macro macro-label" id="cha:analisis-en-varias-variables"
+    >{cha:analisis-en-varias-variables}</span
+  >
+</p>
+<h2>Teoria de anillos</h2>
+<p>
+  <span class="macro macro-label" id="cha:teoria-de-anillos"
+    >{cha:teoria-de-anillos}</span
+  >
+</p>
+<h2>Estadistica</h2>
+<p>
+  <span class="macro macro-label" id="cha:estadistica">{cha:estadistica}</span>
+</p>
+<h2>Procesos estocasticos</h2>
+<p>
+  <span class="macro macro-label" id="cha:procesos-estocasticos"
+    >{cha:procesos-estocasticos}</span
+  >
+</p>
+<h1>Décimo trimestre</h1>
+<h2>Geometria diferencial</h2>
+<p>
+  <span class="macro macro-label" id="cha:geometria-diferencial"
+    >{cha:geometria-diferencial}</span
+  >
+</p>
+<h2>Analisis complejo</h2>
+<p>
+  <span class="macro macro-label" id="cha:analisis-complejo"
+    >{cha:analisis-complejo}</span
+  >
+</p>
+<h1>Onceavo trimestre</h1>
+<h2>Teoria de la medida</h2>
+<p>
+  <span class="macro macro-label" id="cha:teoria-de-la-medida"
+    >{cha:teoria-de-la-medida}</span
+  >
+</p>
+<h1>Doceavo trimestre</h1>
+<h2>Analisis armonico</h2>
+<p>
+  <span class="macro macro-label" id="cha:analisis-armonico"
+    >{cha:analisis-armonico}</span
+  >
+</p>
+<h1>Treceavo trimestre</h1>
+<h1>Catorceavo trimestre</h1>
+<h2>Analisis funcional</h2>
+<p>
+  <span class="macro macro-label" id="cha:analisis-funcional"
+    >{cha:analisis-funcional}</span
+  >
+</p>
+<h2>Ecuaciones difernciales parciales</h2>
+<p>
+  <span class="macro macro-label" id="cha:ecuaciones-difernciales-parciales"
+    >{cha:ecuaciones-difernciales-parciales}</span
+  >
+</p>
+<h1>Quinceavo trimestre</h1>
+
+      </main>
+    </body>
+ </html>
+ 

@@ -1,8 +1,18 @@
 % Dummy enviroment to insert divs in the generated HTML
-\newenvironment{htmlDiv}[1]{}{}
+\newenvironment{classnameSeparator}{}{}
 
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{amsthm}
 
-% \newcommand{\R}{\mathbb{R}}
-\newcommand{\Q}{\mathbb{Q}}
+\newtheorem{theorem}{Teorema}
+
+\newtheorem{definition}{Definición}
+
+% Dummy command to insert titles.
+\newcommand{\HTMLclassTitle}[1]{}
+
+\newcommand{\C}{\mathbb{C}} % Complex
+\newcommand{\R}{\mathbb{R}} % Real
+\newcommand{\Q}{\mathbb{Q}} % Rational
+\newcommand{\F}{\mathbb{F}} % Arbitrary Field
