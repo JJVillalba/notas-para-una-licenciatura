@@ -1,18 +1,70 @@
 \chapter{Álgebra lineal I} % (fold)
 \label{cha:algebra_lineal_i}
 
+\section{Espacios vectoriales} % (fold)
+\label{sec:espacios_vectoriales}
+
 \begin{definition}[Espacio vectorial]
+	\label{def:espacio_vectorial}
 	\HTMLclassTitle{Espacio vectorial}
-	Sea \(\F\) un conjunto de escalares (usualmente \(\R\) o \(\C\)) y sea V un
-	conjunto con dos operaciones llamadas \textbf{addición} y \textbf{adición
-	escalar}. Representamos la adición de \(\vec{a}\)
+	Sea \(\F\) un conjunto de escalares (usualmente \(\R\) o \(\C\)) y sea 
+	\(\cV\) un conjunto con dos operaciones llamadas \textbf{adición} y 
+	\textbf{adición	escalar}. Representamos la adición de \(\vec{v}, 
+	\vec{w} \in \cV\) como \(\vec{v} + \vec{w}\), y la multiplicación de \(c
+	\in \F\) y \(\vec{v}\) como \(c\vec{v}\).
+
+	Si las siguientes condiciones se cumplen para todos \(\vec{v}, \vec{w}, 
+	\vec{z} \in \cV\) y para todos \(c,d \in \F\), entonces decimos que \(\cV\) 
+	es un \textbf{espacio vectorial} y llamamos a sus elementos 
+	\textbf{vectores}:
 
 	\begin{enumerate}
-		\item \(\vec{a} + \vec{b} \in V\)
-		\item \(\vec{v} + \vec{w} = \vec{w} + \vec{v}\)
+		\item \(\vec{a} + \vec{b} \in V\).
+
+		\item \(\vec{v} + \vec{w} = \vec{w} + \vec{v}\).
+
+		\item \((\vec{v} + \vec{w} ) +  \vec{z} = \vec{v} + (\vec{w} + 
+		\vec{z}\)).
+
+		\item Existe un elemento \(\vec{0} \in \cV\) tal que \(\vec{v} + 
+		\vec{0} = \vec{v}\).
+
+		\item Para todo vector \(\vec{v} \in \cV\) existe \(-\vec{v} \in \cV\)
+		tal que \(\vec{v} + (-\vec{v}) = 0\).
+
+		\item \(c \vec{v} \in \cV\).
+
+		\item \(c(\vec{v} + \vec{w}) = c \vec{v} + c \vec{w} \).
+
+		\item \((c+d) \vec{v} = c \vec{v} + d \vec{w}\).
+
+		\item \(c(d \vec{v}) = (cd) \vec{v}\).
+
+		\item \(1 \vec{v} = \vec{v}\).
 	\end{enumerate}
 	
 \end{definition}
 
-% chapter álgebra-lineal-i (end)
+\begin{theorem}
+	Suponga que \(\cV\) es un espacio vectorial y \(\vec{v} \in \cV\), entonces:
+	\[ 0 \vec{v} = \vec{0} \quad \text{y} \quad	(-1) \vec{v} = -\vec{v} .\]
+\end{theorem}
 
+\begin{proof}
+	Para mostrar que \(0 \vec{v} = \vec{0}\), usaremos con cuidado varias
+	propiedades de la definición de espacio vectorial 
+	\ref{def:espacio_vectorial}:
+	\[
+	\begin{aligned}
+		0 \vec{v} &= 0 \vec{v} + \vec{0} \\
+			&= 0 \vec{v} + (0 \vec{v} + (- 0 \vec{v})) \\
+			&= (0 \vec{v} + 0 \vec{v}) + (-0 \vec{v})\\
+			&= (0 + 0) \vec{v} + (-0\vec{v}) \\
+			&= 0\vec{v} + (-0\vec{v}) \\
+			&= \vec{0}.
+	\end{aligned}
+	\]
+
+	Ahora que sabemos que \(0 \vec{0}\), probar que \((-1)\vec{v} = -\vec{v}\)
+	es mas sencillo:
+\end{proof}

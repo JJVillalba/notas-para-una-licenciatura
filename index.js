@@ -33,9 +33,6 @@ if (MAKE_PDF) {
  * COMPILE HTML
  */
 
-// global.window = createHTMLWindow();
-// global.document = window.document;
-
 const _main_file = fs.readFileSync("./book/main.tex", { encoding: "utf-8" });
 
 const latex_doc = _main_file
@@ -52,50 +49,54 @@ const latex_doc = _main_file
     return fs.readFileSync(path, { encoding: "utf-8" });
   });
 
-// const latex_doc = macro_substitution(_expanded_latex);
-
 const latex_html = unified()
   .use(unifiedLatexFromString, {
     macros: {
       label: { signature: "m" },
       HTMLclassTitle: { signature: "m" },
+      newthought: { signature: "m" },
     },
   })
   .use(unifiedLatexToHast)
   .use(rehypeStringify)
   .processSync(latex_doc);
 
-// console.log(latex_html)
-
 const jsdom = new JSDOM(latex_html.value);
-jsdom.window.document.querySelectorAll(".display-math").forEach((node) => {
-  node.innerHTML = katex.renderToString(node.innerHTML, {
-    displayMode: true,
-    macros: macros,
-    fleqn: true,
-  });
-});
 
-jsdom.window.document.querySelectorAll(".inline-math").forEach((node) => {
-  node.innerHTML = katex.renderToString(node.innerHTML, { macros: macros });
-});
+// Render KaTeX expressions
+jsdom.window.document
+  .querySelectorAll(".display-math, .inline-math")
+  .forEach(
+    (node) =>
+      (node.innerHTML = katex.renderToString(
+        node.innerHTML.replace(/amp;|&&/g, "&"),
+        node.classList.contains("inline-math")
+          ? { macros: macros }
+          : { macros: macros, displayMode: true, fleqn: true }
+      ))
+  );
 
-jsdom.window.document.querySelectorAll(".macro-label").forEach((node) => {
-  node.id = node.innerHTML.replace("{", "").replace("}", "");
-});
+// Add id to label to be referenced
+jsdom.window.document
+  .querySelectorAll(".macro-label")
+  .forEach((node) => (node.id = node.innerHTML.slice(1, -1)));
 
+// Convert ref in anchors tags
 jsdom.window.document.querySelectorAll(".macro-ref").forEach((node) => {
-  const refId = node.innerHTML.replace("{", "").replace("}", "");
+  const refId = node.innerHTML.slice(1, -1);
   node.outerHTML = `<a href="#${refId}">ref</a>`;
 });
 
-jsdom.window.document.querySelectorAll(".macro-HTMLclassTitle").forEach((node) => {
-  node.innerHTML = node.innerHTML.replace("{", "").replace("}", "");
-});
+// Remove braces from custom macros
+jsdom.window.document
+  .querySelectorAll(
+    ["macro-label", ".macro-HTMLclassTitle", ".macro-newthought"].join(", ")
+  )
+  .forEach((node) => (node.innerHTML = node.innerHTML.slice(1, -1)));
 
 const html = `
  <!DOCTYPE html>
- <html lang="en">
+ <html lang="es">
  <head>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">

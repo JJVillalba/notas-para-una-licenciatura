@@ -1,39 +1,73 @@
 @import url(reset.css);
-
 @import url(katex.css);
-
+@import url(variables.css);
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&display=swap");
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  --title-multiplier: 1;
+}
+
+@media (max-width: 600px) {
+  html {
+    --title-multiplier: 0.2;
+  }
 }
 
 .katex {
-  font-size: 2.6rem !important;
+  font-size: var(--body-font-size) !important;
 }
 
 body {
-  font-family: "Alegreya", serif;
-  font-size: 2.6rem;
-  line-height: 150%;
+  font-family: var(--font);
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
 }
 
 main {
-  max-width: 680px;
+  max-width: var(--main-max-size);
+  hyphens: auto;
   margin: auto;
 }
 
-p + p {
-  margin-top: 2.2rem;
+b.textbf {
+  font-weight: 600;
 }
 
+p + p {
+  margin-top: var(--par-skip);
+}
+
+.macro-label {
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+.macro-newthought {
+  font-family: var(--font-small-caps);
+}
+
+/* LISTS */
+
+ol {
+  list-style: decimal;
+  margin-left: var(--list-left-margin);
+}
+
+li + li {
+  margin-top: calc(var(--par-skip) * 0.5);
+}
+
+/* TITLES */
+
 h1 {
+  font-size: calc(var(--part-font-size) * var(--title-multiplier));
+  font-family: var(--font-small-caps);
   margin-top: 90vh;
   display: flex;
   align-items: center;
-  font-size: 6rem;
-  font-family: "Alegreya Sans SC", sans-serif;
 }
 
 h1 + h2 {
@@ -41,18 +75,15 @@ h1 + h2 {
 }
 
 h2 {
-  font-size: 4.2rem;
-  /* margin-top: 1rem; */
+  margin-top: 90vh;
+  font-size: var(--chapter-font-size);
 }
 
-.macro-label {
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
+/* HEADER */
 
 header {
-  max-width: 680px;
+  line-height: 0.7;
+  max-width: var(--main-max-size);
   height: 100vh;
   position: relative;
   margin: auto auto 30vh auto;
@@ -79,12 +110,65 @@ header h2 {
   font-size: 3rem;
 }
 
+/* DEFINITION ENVIRONMENT */
+
 .environment.definition {
-  background-color: rgb(240, 240, 240);
-  padding: 0.6rem 1rem;
+  background-color: var(--box-background-color);
+  padding: var(--box-inner-padding);
+  border-left: 5px red solid;
+  margin: 2rem 0;
+
+  border-radius: var(--box-border-radius);
+}
+
+.environment.definition br {
+  margin-top: var(--par-skip);
+  display: block;
 }
 
 .environment.definition .macro-HTMLclassTitle {
   font-weight: bold;
   display: block;
 }
+
+/* Theorem environment */
+
+.environment.theorem {
+  background-color: var(--box-background-color);
+  padding: var(--box-inner-padding);
+  margin: 2rem 0;
+  border-left: 5px blue solid;
+  border-radius: var(--box-border-radius);
+}
+
+.environment.theorem br {
+  margin-top: var(--par-skip);
+  display: block;
+}
+
+.environment.theorem .macro-HTMLclassTitle {
+  font-weight: bold;
+  display: block;
+}
+
+
+/* Proof environment */
+
+.environment.proof {
+  background-color: var(--box-background-color);
+  padding: var(--box-inner-padding);
+  border-left: 5px grey solid;
+  margin: 2rem 0;
+  border-radius: var(--box-border-radius);
+}
+
+.environment.proof br {
+  margin-top: var(--par-skip);
+  display: block;
+}
+
+.environment.proof .macro-HTMLclassTitle {
+  font-weight: bold;
+  display: block;
+}
+
