@@ -26,9 +26,23 @@ body {
 }
 
 main {
-  max-width: var(--main-max-size);
+  max-width: var(--full-content-size);
+  margin: 0 0 0
+    clamp(0px, calc((100vw - var(--full-content-size)) * 0.5), 18rem);
   hyphens: auto;
-  margin: auto;
+}
+
+@media (max-width: 1010px) {
+  main {
+    max-width: var(--main-max-size);
+    padding: 2rem;
+    margin: auto;
+  }
+}
+
+main .text-body {
+  position: relative;
+  max-width: var(--main-max-size);
 }
 
 b.textbf {
@@ -49,6 +63,21 @@ p + p {
   font-family: var(--font-small-caps);
 }
 
+.macro-sidenote {
+  font-size: var(--sidenote-font-size);
+  display: block;
+  width: var(--side-notes-size);
+  position: absolute;
+  left: calc(var(--main-max-size) + 3rem);
+}
+
+@media (max-width: 1010px) {
+  .macro-sidenote {
+    position: static;
+    width: auto;
+  }
+}
+
 /* LISTS */
 
 ol {
@@ -63,9 +92,12 @@ li + li {
 /* TITLES */
 
 h1 {
-  font-size: calc(var(--part-font-size) * var(--title-multiplier));
   font-family: var(--font-small-caps);
-  margin-top: 90vh;
+  font-size: var(--part-font-size) ;
+  line-height: 1;
+  hyphens: none;
+  margin-top: 75vh;
+  margin-bottom: 75vh;
   display: flex;
   align-items: center;
 }
@@ -76,35 +108,38 @@ h1 + h2 {
 
 h2 {
   margin-top: 90vh;
+  hyphens: none;
+  line-height: 1.2;
   font-size: var(--chapter-font-size);
 }
 
 /* HEADER */
 
-header {
+.cover {
   line-height: 0.7;
   max-width: var(--main-max-size);
   height: 100vh;
   position: relative;
-  margin: auto auto 30vh auto;
+  margin-bottom: 50vh;
 }
 
-header .title {
+.cover .cover__title {
   position: absolute;
-  top: 35%;
+  top: 30%;
 }
 
-header h1 {
+.cover h1 {
   margin-top: 0;
-  font-size: 9rem;
+  font-size: min(9rem, 15vw);
 }
-header h3 {
+
+.cover h3 {
   margin-top: 1rem;
   padding-left: 0.4rem;
-  font-size: 4.22rem;
+  font-size: min(9rem, 7vw);
 }
 
-header h2 {
+.cover h2 {
   position: absolute;
   bottom: 10%;
   font-size: 3rem;
@@ -151,7 +186,6 @@ header h2 {
   display: block;
 }
 
-
 /* Proof environment */
 
 .environment.proof {
@@ -171,4 +205,3 @@ header h2 {
   font-weight: bold;
   display: block;
 }
-

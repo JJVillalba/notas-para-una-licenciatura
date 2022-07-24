@@ -1,23 +1,108 @@
-% Dummy enviroment to insert divs in the generated HTML
-\newenvironment{classnameSeparator}{}{}
+% Packages
 
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amsthm}
-
-\newtheorem{theorem}{Teorema}
-
-\newtheorem{definition}{Definición}
+\usepackage{hyperref}
 
 % Html conversion
 
 % Dummy command to insert titles.
 \newcommand{\HTMLclassTitle}[1]{}
 
+% Document geometry
+\usepackage{fancyhdr}
+\fancyhead[LO]{Overleaf}
+\fancyhead[RE]{Guides and tutorials}
+
+\newlength{\hscale}
+\newlength{\vscale}
+
+%\makeatletter
+\setlength{\hscale}{1mm}
+\setlength{\vscale}{1mm}
+%\makeatother
+
+
+\usepackage{layout}
+\usepackage{geometry}
+ %\geometry{
+	% asymmetric, % comment if the document will be two sides
+ 	%paperwidth=210\hscale,
+	%paperheight=297\vscale,
+ %}
+
+
+% Layout #1: large margins
+\newcommand{\marginlayout}{%
+	\newgeometry{
+		asymmetric,
+	 	paperwidth=210\hscale,
+		paperheight=297\vscale,
+		top=27.4\vscale,
+		bottom=27.4\vscale,
+		inner=24.8\hscale,
+		textwidth=107\hscale,
+		marginparsep=6.2\hscale,
+		marginparwidth=47.7\hscale,
+	}%
+	%\recalchead%
+	%\widelayoutfalse%
+}
+
+\marginlayout
+
+% Layout #2: small, symmetric margins
+\newcommand{\widelayout}{%
+	\newgeometry{
+		top=27.4\vscale,
+		bottom=27.4\vscale,
+		inner=24.8\hscale,
+		outer=24.8\hscale,
+		marginparsep=0mm,
+		marginparwidth=0mm,
+	}%
+	\recalchead%
+	\widelayouttrue%
+}
+
+% Layout #3: no margins and no space above or below the body
+\newcommand{\fullwidthpage}{%
+	\newgeometry{
+		top=0mm,
+		bottom=0mm,
+		inner=0mm,
+		outer=0mm,
+		marginparwidth=0mm,
+		marginparsep=0mm,
+	}%
+	\recalchead%
+	\widelayouttrue%
+}
+
+
 % Typography
+\usepackage[osf,sc]{mathpazo}
+\usepackage[scaled=0.9]{helvet}
+\usepackage[scaled=0.85]{beramono} 
+\usepackage[T1]{fontenc} %  8-bit encoding
+\usepackage{textcomp} % supports the Text Companion fonts
+\usepackage{microtype}
+\usepackage{sidenotes}
+
 \newcommand{\newthought}[1]{\textsc{#1}}
 
 % Mathematics
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% Math Environments
+
+\newtheorem{theorem}{Teorema}
+\newtheorem{corollary}{Corolario}
+\newtheorem{lema}{Lema}
+\newtheorem{proposition}{Proposición}
+\newtheorem{definition}{Definición}
+
+
 \newcommand{\C}{\mathbb{C}} % Complex
 \newcommand{\R}{\mathbb{R}} % Real
 \newcommand{\Q}{\mathbb{Q}} % Rational

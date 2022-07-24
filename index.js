@@ -10,7 +10,7 @@ import rehypeStringify from "rehype-stringify/lib/index.js";
 import katex from "katex";
 import { format } from "prettier";
 
-const MAKE_PDF = true;
+const MAKE_PDF = false;
 
 /**
  * COMPILE PDF
@@ -53,6 +53,7 @@ const latex_html = unified()
   .use(unifiedLatexFromString, {
     macros: {
       label: { signature: "m" },
+      sidenote: { signature: "m" },
       HTMLclassTitle: { signature: "m" },
       newthought: { signature: "m" },
     },
@@ -90,7 +91,12 @@ jsdom.window.document.querySelectorAll(".macro-ref").forEach((node) => {
 // Remove braces from custom macros
 jsdom.window.document
   .querySelectorAll(
-    ["macro-label", ".macro-HTMLclassTitle", ".macro-newthought"].join(", ")
+    [
+      // ".macro-label",
+      ".macro-HTMLclassTitle",
+      ".macro-newthought",
+      ".macro-sidenote",
+    ].join(", ")
   )
   .forEach((node) => (node.innerHTML = node.innerHTML.slice(1, -1)));
 
@@ -106,18 +112,21 @@ const html = `
      <title>Notas</title>
  </head>
  <body>
-    <header>
-      <div class="title">
-        <h1>Matemáticas</h1>
-        <h3>Notas para una licenciatura</h3>
-      </div>
-      <h2>José Julián Villalba Vásquez</h2>
-    </header>
+   
     <main>
+      <div class="cover">
+        <div class="cover__title">
+          <h1>Matemáticas</h1>
+          <h3>Notas para una licenciatura</h3>
+        </div>
+    <h2>José Julián Villalba Vásquez</h2>
+    </div>
+      <div class="text-body">
         ${format(
           jsdom.window.document.documentElement.querySelector("body").innerHTML,
           { parser: "html" }
         )}
+        </div>
       </main>
     </body>
  </html>
