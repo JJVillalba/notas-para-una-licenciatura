@@ -3,27 +3,31 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "node index.js",
+    "compile": "node ./latex_to_js/index.js",
     "compile:pdf": "",
-    "compile:web": ""
+    "compile:web": "",
+    "start": "vite serve webpage",
+    "build": "vite build webpage"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@unified-latex/unified-latex-to-hast": "^1.0.12",
     "fs-extra": "^10.1.0",
     "html-prettify": "^1.0.7",
     "jsdom": "^20.0.0",
     "katex": "^0.16.0",
-    "latex.js": "^0.12.4",
     "prettier": "^2.7.1",
     "rehype-stringify": "^9.0.3",
-    "unified": "^10.1.2"
-  },
-  "devDependencies": {
-    "@types/fs-extra": "^9.0.13"
+    "unified": "^10.1.2",
+    "@parcel/transformer-sass": "^2.6.2",
+    "@types/fs-extra": "^9.0.13",
+    "parcel": "^2.6.2",
+    "vite": "^3.0.3",
+    "vite-plugin-handlebars": "^1.6.0",
+    "vite-plugin-html-inject": "^1.0.0"
   }
 }

@@ -4,6 +4,9 @@
 \section{Espacios vectoriales} % (fold)
 \label{sec:espacios_vectoriales}
 
+\subsection{Espacios vectoriales y subespacios} % (fold)
+\label{sub:espacios_vectoriales_y_subespacios}
+
 \begin{definition}[Espacio vectorial]
 	\label{def:espacio_vectorial}
 	\HTMLclassTitle{Espacio vectorial}
@@ -54,17 +57,291 @@
 	Para mostrar que \(0 \vec{v} = \vec{0}\), usaremos con cuidado varias
 	propiedades de la definición de espacio vectorial 
 	\ref{def:espacio_vectorial}:
-	\[
-	\begin{aligned}
+	\[ \begin{aligned}
 		0 \vec{v} &= 0 \vec{v} + \vec{0} \\
 			&= 0 \vec{v} + (0 \vec{v} + (- 0 \vec{v})) \\
 			&= (0 \vec{v} + 0 \vec{v}) + (-0 \vec{v})\\
 			&= (0 + 0) \vec{v} + (-0\vec{v}) \\
 			&= 0\vec{v} + (-0\vec{v}) \\
 			&= \vec{0}.
-	\end{aligned}
-	\]
+	\end{aligned} \]
 
 	Ahora que sabemos que \(0 \vec{0}\), probar que \((-1)\vec{v} = -\vec{v}\)
 	es mas sencillo:
-\end{proof}
+
+	\[ \begin{aligned}
+		\vec{0} &= 0\vec{v} \\
+			&= (1 - 1) \vec{v} \\
+			&= 1\vec{v} + (-1) \vec{v} \\
+			&= \vec{v} + (-1)\vec{v} \\
+	\end{aligned} .\]
+	Se sigue que \((-1\vec{v}) = -\vec{v}\).
+ \end{proof}
+
+\subsubsection{Subespacios vectoriales} % (fold)
+\label{ssub:subespacios vectoriales}
+
+\subsubsection{Espacios generados, combinaciones lineales e independencia
+ lineal} % % (fold)
+\label{ssub:espacios_generados_combinaciones_lineales_e_independencia_lineal}
+
+\subsubsection{Bases} % (fold)
+\label{ssub:bases}
+
+\subsection{Coordenadas y transformaciones lineales} % (fold)
+\label{sub:coordenadas_y_transformaciones_lineales}
+
+\subsubsection{Dimensiones y vectores de coordenadas} % (fold)
+\label{ssub:dimensiones_y_vectores_de_coordenadas}
+
+\subsubsection{Cambio de bases} % (fold)
+\label{ssub:cambio_de_bases}
+
+\subsubsection{Transformaciones lineales} % (fold)
+\label{ssub:transformaciones_lineales}
+
+\subsubsection{Propiedades de las transformaciones lineales} % (fold)
+\label{ssub:propiedades_de_las_transformaciones_lineales}
+
+\subsection{Isomorfismos y formas lineales} % (fold)
+\label{sub:isomorfismos_y_formas_lineales}
+
+\subsubsection{Isomorfismos} % (fold)
+\label{ssub:isomorfismos}
+
+\subsubsection{Formas lineales} % (fold)
+\label{ssub:formas_lineales}
+
+\subsubsection{Bilinealidad y otros} % (fold)
+\label{ssub:bilinealidad_y_otros}
+
+\subsubsection{Producto interno} % (fold)
+\label{ssub:producto_interno}
+
+\subsection{Ortogonalidad y adjuntas} % (fold)
+\label{sub:ortogonalidad_y_adjuntas}
+
+\subsubsection{Bases ortonormales} % (fold)
+\label{ssub:bases_ortonormales}
+
+\subsubsection{Transformaciones adjuntas} % (fold)
+\label{ssub:transformaciones_adjuntas}
+
+\subsubsection{Matrices unitarias} % (fold)
+\label{ssub:matrices_unitarias}
+
+\subsubsection{Proyecciones} % (fold)
+\label{ssub:proyecciones}
+
+\subsection{Mas acerca de la traza} % (fold)
+\label{sub:mas_acerca_de_la_traza}
+
+\subsubsection{Caracterización algebraica de la traza} % (fold)
+\label{ssub:caracterizacion_algebraica_de_la_traza}
+
+\subsubsection{Interpretación geométrica de la traza} % (fold)
+\label{ssub:interpretacion_geometrica_de_la_traza}
+
+\subsection{Suma directa y complemento ortogonal} % (fold)
+\label{sub:suma_directa_y_complemento_ortogonal}
+
+\subsubsection{La suma interna directa interna} % (fold)
+\label{ssub:la_suma_interna_directa_interna}
+
+\subsubsection{Complemento ortogonal} % (fold)
+\label{ssub:complemento_ortogonal}
+
+\subsubsection{La suma directa externa} % (fold)
+\label{ssub:la_suma_directa_externa}
+
+\subsection{La descomposición QR} % (fold)
+\label{sub:la_descomposicion_qr}
+
+\subsubsection{Afirmación y ejemplos} % (fold)
+\label{ssub:afirmacion_y_ejemplos}
+
+\subsubsection{Consecuencias y aplicaciones} % (fold)
+\label{ssub:consecuencias_y_aplicaciones}
+
+\subsection{Normas e isometrias} % (fold)
+\label{sub:normas_e_isometrias}
+
+\subsubsection{Las \(p\)-normas} % (fold)
+\label{ssub:las_p_normas}
+
+\subsubsection{De las normas devuelta a los productos internos} % (fold)
+\label{ssub:de_las_normas_devuelta_a_los_productos_internos}
+
+\subsubsection{Isometrias} % (fold)
+\label{ssub:isometrias}
+
+\section{Descomposición de matrices} % (fold)
+\label{sec:descomposicion_de_matrices}
+
+\subsection{La descomposiciones espectrales y de Schur} % (fold)
+\label{sub:la_descomposiciones_espectrales y de Schur}
+
+\subsubsection{Triangularización de Schur} % (fold)
+\label{ssub:triangularizacion_de_schur}
+
+\subsubsection{Matrices normales y la de descomposición espectral compleja} % 
+\label{ssub:matrices_normales_y_la_de_descomposicion_espectral_compleja}
+
+\subsubsection{La descomposición espectral real} % (fold)
+\label{ssub:la_descomposicion_espectral_real}
+
+\subsection{Matrices positivas} % (fold)
+\label{sub:Matrices_positivas}
+
+\subsubsection{Caracterización de las matrices positivas semidefinidas} % (fold)
+\label{ssub:caracterizacion_de_las_matrices_positivas_semidefinidas}
+
+\subsubsection{Dominancia diagonal y discos de Gershgorin} % (fold)
+\label{ssub:dominancia_diagonal_y_discos_de_gershgorin}
+
+\subsubsection{Libertad unitaria y descomposición PSD} % (fold)
+\label{ssub:libertad_unitaria_y_descomposicion_psd}
+
+\subsection{Descomposición en valores singulares} % (fold)
+\label{sub:descomposicion_en_valores_singulares}
+
+\subsubsection{Interpretación geométrica y los subespacios fundamentales} % 
+\label{ssub:interpretacion_geometrica_y_los_subespacios_fundamentales}
+
+\subsubsection{Relación con otras descomposiciones matriciales} % (fold)
+\label{ssub:relacion_con_otras_descomposiciones_matriciales}
+
+\subsubsection{El operador norma} % (fold)
+\label{ssub:el_operador_norma}
+
+\subsection{La descomposición de Jordan} % (fold)
+\label{sub:la_descomposicion_de_jordan}
+
+\subsubsection{Unicidad y similaridad} % (fold)
+\label{ssub:unicidad_y_similaridad}
+
+\subsubsection{Existencia y computo} % (fold)
+\label{ssub:existencia_y_computo}
+
+\subsubsection{Funciones matriciales} % (fold)
+\label{ssub:funciones_matriciales}
+
+\subsubsection{Funciones matriciales} % (fold)
+\label{ssub:funciones_matriciales}
+
+\subsection{Formas cuadráticas y secciones cónicas} % (fold)
+\label{sub:formas_cuadraticas_y_secciones_conicas}
+
+\subsubsection{Definitividad, ellipsoides y paraboloides} % (fold)
+\label{ssub:definitividad_ellipsoides_y_paraboloides}
+
+\subsubsection{Indefinitividad e hiperboloides} % (fold)
+\label{ssub:indefinitividad_e_hiperboloides}
+
+\subsection{Complemento de Schur y Cholesky} % (fold)
+\label{sub:complemento_de_schur_y_cholesky}
+
+\subsubsection{Complemento de Schur} % (fold)
+\label{ssub:complemento_de_schur}
+
+\subsubsection{La descomposición de Cholesky} % (fold)
+\label{ssub:la_descomposicion_de_cholesky}
+
+\subsubsection{Aplicaciones de la SVD} % (fold)
+\label{ssub:aplicaciones_de_la_svd}
+
+\subsubsection{Las pseudoinversa y los mínimos cuadrados} % (fold)
+\label{ssub:las_pseudoinversa_y_los_minimos_cuadrados}
+
+\subsubsection{Aproximaciones de bajo rango} % (fold)
+\label{ssub:aproximaciones_de_bajo_rango}
+
+\subsection{Continuidad y análisis matricial} % (fold)
+\label{sub:continuidad_y_analisis_matricial}
+
+\subsubsection{Conjuntos densos de matrices} % (fold)
+\label{ssub:conjuntos_densos_de_matrices}
+
+\subsubsection{Continuidad y funciones matriciales} % (fold)
+\label{ssub:continuidad_y_funciones_matriciales}
+
+\subsubsection{Trabajando con matrices no invertibles} % (fold)
+\label{ssub:trabajando_con_matrices_no_invertibles}
+
+\subsubsection{Trabajando con matrices no diagonalizables} % (fold)
+\label{ssub:trabajando_con_matrices_no_diagonalizables}
+
+\section{Tensores y multilinealidad} % (fold)
+\label{sec:tensores_y_multilinealidad}
+
+\subsection{El producto de Kronecker} % (fold)
+\label{sub:el_producto_de_kronecker}
+
+\subsubsection{Definición y propiedades básicas} % (fold)
+\label{ssub:definicion_y_propiedades_basicas}
+
+\subsubsection{Vectorización y la matriz de cambio} % (fold)
+\label{ssub:vectorizacion_y_la_matriz_de_cambio}
+
+\subsubsection{Los subespacios simétricos y antisimetricos} % (fold)
+\label{ssub:los_subespacios_simetricos_y_antisimetricos}
+
+\subsection{Transformaciones multilineales} % (fold)
+\label{sub:transformaciones_multilineales}
+
+\subsubsection{Definición y ejemplos básicos} % (fold)
+\label{ssub:definicion_y_ejemplos_basicos}
+
+\subsubsection{Listas} % (fold)
+\label{ssub:listas}
+
+\subsubsection{Propiedades de las transformaciones multilineales} % (fold)
+\label{ssub:propiedades_de_las_transformaciones_multilineales}
+
+\subsection{El producto tensorial} % (fold)
+\label{sub:el_producto_tensorial}
+
+\subsubsection{Motivación y definiciones} % (fold)
+\label{ssub:motivacion_y_definiciones}
+
+\subsubsection{Existencia y unicidad} % (fold)
+\label{ssub:existencia_y_unicidad}
+
+\subsubsection{Rango tensorial} % (fold)
+\label{ssub:rango_tensorial}
+
+\subsection{Funciones lineales de valores matriciales} % (fold)
+\label{sub:funciones_lineales_de_valores_matriciales}
+
+\subsubsection{Representación} % (fold)
+\label{ssub:representacion}
+
+\subsubsection{El producto Kronecker de funciones de valores matriciales} % 
+\label{ssub:el_producto_kronecker_de_funciones_de_valores_matriciales}
+
+\subsubsection{Funciones positivas y completamente positivas} % (fold)
+\label{ssub:funciones_positivas_y_completamente_positivas}
+
+\subsection{Polinomios homogéneos} % (fold)
+\label{sub:polinomios_homogeneos}
+
+\subsubsection{Potencias de formas lineales} % (fold)
+\label{ssub:potencias_de_formas_lineales}
+
+\subsubsection{Positividad semidefinida y suma de cuadrados} % (fold)
+\label{ssub:positividad_semidefinida_y_suma_de_cuadrados}
+
+\subsubsection{Formas bicuadraticas} % (fold)
+\label{ssub:formas_bicuadraticas}
+
+\subsection{Programación semidefinida} % (fold)
+\label{sub:programacion_semidefinida}
+
+\subsubsection{La forma de una programa semidefinido} % (fold)
+\label{ssub:la_forma_de_una_programa_semidefinido}
+
+\subsubsection{Interpretación geométrica y solución} % (fold)
+\label{ssub:interpretacion_geometrica_y_solucion}
+
+\subsubsection{Dualidad} % (fold)
+\label{ssub:dualidad}

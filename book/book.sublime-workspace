@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"make",
+				"\\makeatother                                      \tlatex-document"
+			],
+			[
 				"newco",
 				"\\newcommand{cmd}[args]{def}                       \tlatex-document"
 			],
@@ -132,10 +136,19 @@
 	"buffers":
 	[
 		{
-			"file": "chapters/Algebra_lineal_I/index.tex",
+			"file": "main.tex",
 			"settings":
 			{
-				"buffer_size": 2175,
+				"buffer_size": 2872,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "chapters/Geometria_euclideana_I/index.tex",
+			"settings":
+			{
+				"buffer_size": 617,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -253,6 +266,22 @@
 		"selected_items":
 		[
 			[
+				"type",
+				"Typewriter: Scrolling Mode (Toggle)"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"sette",
+				"Set Syntax: TeX"
+			],
+			[
+				"canc",
+				"Build: Cancel"
+			],
+			[
 				"war",
 				"Auto Wrap: Toggle"
 			],
@@ -317,10 +346,6 @@
 				"Auto Wrap: Toggle"
 			],
 			[
-				"pack",
-				"Package Control: Install Package"
-			],
-			[
 				"we",
 				"Auto Wrap: Toggle"
 			],
@@ -382,27 +407,31 @@
 	],
 	"file_history":
 	[
-		"/home/jjvv/Escritorio/webook/book/chapters/Computo_cientifico_I/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Fundamentos_del_algebra/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Calculo_diferencial_de_una_variable/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Matematicas_discretas/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Combinatoria/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Geometria_proyectiva_y_no_euclidea/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Geometria_y_algebra_lineal/index.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Herramientas_y_software_matematico/index.tex",
-		"/home/jjvv/Escritorio/webook/book/chapters/Calculo_diferencial_multivariable/index.tex",
-		"/home/jjvv/Escritorio/webook/book/main.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Algebra_lineal_I/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Calculo_integral_en_una_variable_I/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Fundamentos_de_la_matematica/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Calculo_integral_en_una_variable_II/index.tex",
+		"/home/jjvv/Escritorio/webook/book/preamble.tex",
+		"/home/jjvv/Escritorio/webook/webpage/template.html",
+		"/home/jjvv/Escritorio/webook/book/main.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Introducción/index.tex",
+		"/home/jjvv/Descargas/memdesign.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Computo_cientifico_I/index.tex",
+		"/home/jjvv/Escritorio/webook/book/chapters/Calculo_diferencial_multivariable/index.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Geometria_analitica_I/index.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Teoria_de_numeros/index.tex",
-		"/home/jjvv/Escritorio/webook/book/chapters/Fundamentos_del_algebra/index.tex",
-		"/home/jjvv/Escritorio/webook/book/chapters/Calculo_integral_en_una_variable_II/index.tex",
-		"/home/jjvv/Escritorio/webook/book/chapters/Fundamentos_de_la_matematica/index.tex",
-		"/home/jjvv/Escritorio/webook/book/chapters/Calculo_integral_en_una_variable_I/index.tex",
-		"/home/jjvv/Escritorio/webook/book/chapters/Geometria_y_algebra_lineal/index.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Geometria_euclidiana_II/index.tex",
-		"/home/jjvv/Escritorio/webook/book/chapters/Calculo_diferencial_de_una_variable/index.tex",
-		"/home/jjvv/Escritorio/webook/book/chapters/Introducción/index.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Geometria_euclideana_I/index.tex",
-		"/home/jjvv/Escritorio/webook/book/preamble.tex",
 		"/home/jjvv/Escritorio/webook/book/commands.tex",
 		"/home/jjvv/Escritorio/Infocentro Figetel/main.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Algebra_lineal_II/index.tex",
-		"/home/jjvv/Escritorio/webook/book/chapters/Geometria_proyectiva_y_no_euclidea/index.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Analisis_complejo/index.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Geomtria_diferencial/index.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Procesos_estocasticos/index.tex",
@@ -420,11 +449,9 @@
 		"/home/jjvv/Escritorio/webook/book/chapters/Analisis_real_II/index.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Ecuaciones_diferenciales_ordinarias/index.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Algoritmos_y_estructuras/index.tex",
-		"/home/jjvv/Escritorio/webook/book/chapters/Combinatoria/index.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Teoria_de_grupos/index.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Analisis_real_I/index.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Topologia_I/index.tex",
-		"/home/jjvv/Escritorio/webook/book/chapters/Matematicas_discretas/index.tex",
 		"/home/jjvv/Escritorio/latex to javascript/typescript-with-esm-no-babel-boilerplate/src/latex-grammar.pegjs",
 		"/home/jjvv/Escritorio/webook/book/chapters/Computo_cientifico_II/index.tex",
 		"/home/jjvv/Escritorio/webook/book/chapters/Teoria_de_conjuntos/index.tex",
@@ -491,6 +518,16 @@
 		"find_history":
 		[
 			"-",
+			"cha",
+			"chapter",
+			"Operaciones basicas",
+			"section name",
+			"semifinita",
+			"ó",
+			"subsection name",
+			"tensoriales",
+			"Positivo",
+			"-",
 			"calculo-",
 			"siempre en mente que fue escrito por un estudiante mientras estudiaba \n",
 			"estudiante mientras estudiaba ",
@@ -536,32 +573,59 @@
 			[
 				{
 					"buffer": 0,
-					"file": "chapters/Algebra_lineal_I/index.tex",
+					"file": "main.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2175,
+						"buffer_size": 2872,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1841,
-								1841
+								2729,
+								2729
 							]
 						],
 						"settings":
 						{
-							"auto_wrap": true,
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 734.0,
+						"translation.y": 1877.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "chapters/Geometria_euclideana_I/index.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 617,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								585,
+								585
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -614,7 +678,7 @@
 	"project": "book.sublime-project",
 	"replace":
 	{
-		"height": 75.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -624,16 +688,68 @@
 		"selected_items":
 		[
 			[
+				"combi",
+				"chapters/Combinatoria/index.tex"
+			],
+			[
+				"discre",
+				"chapters/Matematicas_discretas/index.tex"
+			],
+			[
+				"caluc",
+				"chapters/Calculo_diferencial_de_una_variable/index.tex"
+			],
+			[
+				"main",
+				"main.tex"
+			],
+			[
+				"funda",
+				"chapters/Fundamentos_de_la_matematica/index.tex"
+			],
+			[
+				"calculo intege",
+				"chapters/Calculo_integral_en_una_variable_II/index.tex"
+			],
+			[
+				"calculo",
+				"chapters/Calculo_integral_en_una_variable_I/index.tex"
+			],
+			[
+				"calcul",
+				"chapters/Calculo_diferencial_de_una_variable/index.tex"
+			],
+			[
+				"intro",
+				"chapters/Introducción/index.tex"
+			],
+			[
+				"man",
+				"main.tex"
+			],
+			[
+				"inde",
+				"chapters/Algebra_lineal_I/index.tex"
+			],
+			[
+				"pre",
+				"preamble.tex"
+			],
+			[
+				"mai",
+				"main.tex"
+			],
+			[
+				"pream",
+				"preamble.tex"
+			],
+			[
 				"algebra",
 				"chapters/Algebra_lineal_I/index.tex"
 			],
 			[
 				"comput",
 				"chapters/Computo_cientifico_I/index.tex"
-			],
-			[
-				"mai",
-				"main.tex"
 			],
 			[
 				"inc",

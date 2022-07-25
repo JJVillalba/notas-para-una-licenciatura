@@ -1,0 +1,145 @@
+@use "variables.scss" as *;
+
+menu {
+  position: fixed;
+  overflow: scroll;
+  z-index: 1000;
+  height: 80px;
+  width: 80px;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  transition: box-shadow 0.3s, width 0.5s, height 0.5s;
+  @include elevation(3);
+  &:hover {
+    transition: box-shadow 0.3s, width 0.5s, height 0.5s;
+    @include elevation(12);
+  }
+  .menu__closed {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .line-1,
+  .line-2,
+  .line-3 {
+    width: 80%;
+    height: 4px;
+    margin: -8px 0;
+    border-radius: 4px;
+    background-color: rgba(black, 0.4);
+  }
+  .menu__open {
+    display: none;
+  }
+  &.close {
+    .menu__open {
+      display: none;
+    }
+  }
+  &.open {
+    @include elevation(3);
+    width: calc(100vw - 80px);
+    height: calc(100vh - 80px);
+    transition: box-shadow 0.3s, width 0.5s, height 0.5s;
+    .menu__closed {
+      display: none;
+    }
+    .menu__open {
+      display: block;
+      padding: 0 5.6rem;
+    }
+  }
+}
+
+menu {
+  // Part
+  a {
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+    &:hover,
+    &:focus,
+    &:active {
+      color: black;
+      text-decoration: none;
+    }
+    &:hover {
+      color: darkviolet;
+      transition: 0.3s;
+    }
+  }
+
+  li {
+    font-size: $body-font-size;
+    text-align: left;
+  }
+
+  // part
+  .level-1 > li {
+    font-family: $font-small-caps;
+    font-size: 4.8rem;
+    text-align: center;
+    margin-top: 3.2rem;
+  }
+
+  .level-2 > li {
+    font-size: 3rem;
+    font-family: $font;
+  }
+
+  .level-3 > li {
+    margin-left: 5rem;
+    font-weight: bold;
+  }
+
+  .level-4 {
+    column-count: 3;
+  }
+
+  .level-4 > li {
+    // margin-left: 5rem;
+    font-weight: normal;
+  }
+
+
+
+  //   ul {
+  //     li {
+  //       font-family: $font-small-caps;
+  //       font-size: 4.8rem;
+  //       text-align: center;
+  //       margin-top: 3.2rem;
+  //     }
+  //   }
+
+  //   //   Chapter
+  //   ul ul li {
+  //     font-size: 3rem;
+  //     text-align: left;
+  //     font-family: $font;
+  //     margin-top: 5.6rem;
+  // }
+
+  //   // Section
+  //   ul ul ul li {
+  //     font-size: $body-font-size;
+  //     margin-top: 3rem;
+  //   }
+
+  //   // Subsection
+  //   ul ul ul ul li {
+  //     margin-left: 0rem;
+  //     margin-top: 0;
+  //     margin-bottom: 1rem;
+  //     font-size: $body-font-size;
+  //     font-weight: normal;
+  //   }
+
+  //   ul ul ul ul  {
+  //     column-count: 2;
+  //   }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notas para una licenciatura</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--  -->
+    <link rel="stylesheet" href="css/katex.min.css" />
+    <link rel="stylesheet" href="css/main.scss" />
+  </head>
+  <body>
+    <main>
+      <div class="cover">
+        <div class="cover__title">
+          <h1>Matemáticas</h1>
+          <h3>Notas para una licenciatura</h3>
+        </div>
+        <h2>José Julián Villalba Vásquez</h2>
+      </div>
+
+      <div class="text-body">
+        {{> content}}
+      </div>
+    </main>
+    <menu class="close">
+      <div class="menu__closed">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+      </div>
+      <div class="menu__open">
+        {{> menu}}
+      </div>
+    </menu>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>

@@ -18,11 +18,11 @@ const MAKE_PDF = false;
 
 if (MAKE_PDF) {
   try {
-    await fs_extra.copy("./book", "./tmp", {});
+    await fs_extra.copy("./book", "./.tmp", {});
 
-    execSync("cd ./tmp && pdflatex main.tex");
+    execSync("cd ./.tmp && pdflatex main.tex");
 
-    fs.copyFileSync("./tmp/main.pdf", "./output/main.pdf");
+    fs.copyFileSync("./.tmp/main.pdf", "./output/main.pdf");
   } catch (error) {
     console.log(error.output.toString());
     process.exit(0);
@@ -63,9 +63,10 @@ const latex_html = unified()
   .processSync(latex_doc);
 
 const jsdom = new JSDOM(latex_html.value);
+const document = jsdom.window.document;
 
 // Render KaTeX expressions
-jsdom.window.document
+document
   .querySelectorAll(".display-math, .inline-math")
   .forEach(
     (node) =>
@@ -78,18 +79,18 @@ jsdom.window.document
   );
 
 // Add id to label to be referenced
-jsdom.window.document
+document
   .querySelectorAll(".macro-label")
   .forEach((node) => (node.id = node.innerHTML.slice(1, -1)));
 
 // Convert ref in anchors tags
-jsdom.window.document.querySelectorAll(".macro-ref").forEach((node) => {
+document.querySelectorAll(".macro-ref").forEach((node) => {
   const refId = node.innerHTML.slice(1, -1);
   node.outerHTML = `<a href="#${refId}">ref</a>`;
 });
 
 // Remove braces from custom macros
-jsdom.window.document
+document
   .querySelectorAll(
     [
       // ".macro-label",
@@ -100,36 +101,85 @@ jsdom.window.document
   )
   .forEach((node) => (node.innerHTML = node.innerHTML.slice(1, -1)));
 
-const html = `
- <!DOCTYPE html>
- <html lang="es">
- <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link type="text/css" rel="stylesheet" href="output/css/base.css">
-     <link type="text/css" rel="stylesheet" href="output/katex/katex.min.css">
-     <title>Notas</title>
- </head>
- <body>
-   
-    <main>
-      <div class="cover">
-        <div class="cover__title">
-          <h1>Matemáticas</h1>
-          <h3>Notas para una licenciatura</h3>
-        </div>
-    <h2>José Julián Villalba Vásquez</h2>
-    </div>
-      <div class="text-body">
-        ${format(
-          jsdom.window.document.documentElement.querySelector("body").innerHTML,
-          { parser: "html" }
-        )}
-        </div>
-      </main>
-    </body>
- </html>
- `;
 
-fs.writeFileSync("./index.html", html);
+const firstKey = (v) => Object.keys(v)[0];
+const firstValue = (v) => v[Object.keys(v)[0]];
+
+const part_index = [];
+document.querySelectorAll("h1, h2, h3, h4").forEach((node) => {
+  if (node.tagName === "H1") {
+    const _id = `part:${node.textContent.replaceAll(" ", "-")}`;
+    node.id = _id;
+    return part_index.push({
+      [node.textContent]: {
+        nodes: [],
+        id: _id,
+      },
+    });
+  }
+
+  const chapter_index = firstValue(part_index.at(-1)).nodes;
+  if (node.tagName === "H2") {
+    const _id = `chapter:${node.textContent.replaceAll(" ", "-")}`;
+    node.id = _id;
+    return chapter_index.push({
+      [node.textContent]: {
+        nodes: [],
+        id: _id,
+      },
+    });
+  }
+
+  const section_index = firstValue(chapter_index.at(-1)).nodes;
+  if (node.tagName === "H3") {
+    const _id = `section:${node.textContent.replaceAll(" ", "-")}`;
+    node.id = _id;
+    return section_index.push({
+      [node.textContent]: {
+        nodes: [],
+        id: _id,
+      },
+    });
+  }
+
+  const subsection_index = firstValue(section_index.at(-1)).nodes;
+  if (node.tagName === "H4") {
+    const _id = `subsection:${node.textContent.replaceAll(" ", "-")}`;
+    node.id = _id;
+    return subsection_index.push({
+      [node.textContent]: {
+        nodes: [],
+        id: _id,
+      },
+    });
+  }
+});
+
+const makeIndex = (value, recursionLevel) => `
+<ul class="level-${recursionLevel}">
+${value.nodes.reduce((prev, curr) => {
+  let expanded = "";
+  if (firstValue(curr).nodes.length !== 0) {
+    expanded = makeIndex(firstValue(curr), recursionLevel + 1);
+  }
+
+  return `${prev}
+  <li>
+    <span>
+      <a href="#${firstValue(curr).id}">${firstKey(curr)}</a>
+    </span>
+    ${expanded}
+  </li>`;
+}, "")}
+</ul>`;
+
+fs.writeFileSync(
+  "./webpage/html/content.html",
+  format(document.querySelector("body").innerHTML, { parser: "html" })
+);
+
+
+fs.writeFileSync(
+  "./webpage/html/menu.html",
+  format(makeIndex({ id: "index", nodes: part_index }, 1), { parser: "html" })
+);

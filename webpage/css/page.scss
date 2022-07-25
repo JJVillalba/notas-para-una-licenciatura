@@ -1,0 +1,217 @@
+@use "variables.scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.katex {
+  font-size: $body-font-size !important;
+}
+
+body {
+  font-family: $font;
+  font-size: $body-font-size;
+  line-height: $line-height;
+}
+
+main {
+  max-width: $full-content-size;
+  margin: 0 0 0 clamp(0px, calc((100vw - $full-content-size) * 0.5), 18rem);
+  margin: 0 0 0 18rem;
+  hyphens: auto;
+}
+
+@media (max-width: 1010px) {
+  main {
+    max-width: $main-max-size;
+    padding: 1.6rem;
+    margin: auto;
+  }
+}
+
+main .text-body {
+  position: relative;
+  max-width: $main-max-size;
+}
+
+b.textbf {
+  font-weight: 600;
+}
+
+p + p {
+  margin-top: $par-skip;
+}
+
+.macro-label {
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+.macro-newthought {
+  font-family: $font-small-caps;
+}
+
+.macro-sidenote {
+  font-size: $sidenote-font-size;
+  display: block;
+  width: $side-notes-size;
+  position: absolute;
+  left: calc($main-max-size + 3rem);
+}
+
+@media (max-width: 1010px) {
+  .macro-sidenote {
+    position: static;
+    width: auto;
+  }
+}
+
+/* LISTS */
+
+ol {
+  list-style: decimal;
+  margin-left: $list-left-margin;
+}
+
+li + li {
+  margin-top: calc($par-skip * 0.5);
+}
+
+/* TITLES */
+
+// Parts
+h1 {
+  font-family: $font-small-caps;
+  font-size: $part-font-size;
+  line-height: 1;
+  hyphens: none;
+  margin-top: 75vh;
+  margin-bottom: 75vh;
+  display: flex;
+  align-items: center;
+}
+
+h1 + h2 {
+  margin-top: 10vh;
+}
+
+// Chapters
+h2 {
+  margin-top: 90vh;
+  hyphens: none;
+  font-size: $chapter-font-size;
+}
+
+// Sections
+h3 {
+  font-size: $section-font-size;
+  hyphens: none;
+}
+
+// Subsection
+h4 {
+  font-size: $subsection-font-size;
+  font-weight: bold;
+}
+
+//
+h5 {
+  font-style: italic;
+  font-size: 2.4rem;
+}
+
+/* HEADER */
+
+.cover {
+  line-height: 0.7;
+  max-width: $main-max-size;
+  height: 100vh;
+  position: relative;
+  margin-bottom: 50vh;
+}
+
+.cover .cover__title {
+  position: absolute;
+  top: 30%;
+}
+
+.cover h1 {
+  margin: 0;
+  font-size: min(9rem, 15vw);
+}
+
+.cover h3 {
+  margin-top: 1rem;
+  padding-left: 0.4rem;
+  font-size: min(4.2rem, 7vw);
+}
+
+.cover h2 {
+  position: absolute;
+  bottom: 10%;
+  font-size: min(3rem, 4vw);
+}
+
+/* DEFINITION ENVIRONMENT */
+
+.environment.definition {
+  background-color: $box-background-color;
+  padding: $box-inner-padding;
+  border-left: 5px red solid;
+  margin: 2rem 0;
+
+  border-radius: $box-border-radius;
+}
+
+.environment.definition br {
+  margin-top: $par-skip;
+  display: block;
+}
+
+.environment.definition .macro-HTMLclassTitle {
+  font-weight: bold;
+  display: block;
+}
+
+/* Theorem environment */
+
+.environment.theorem {
+  background-color: $box-background-color;
+  padding: $box-inner-padding;
+  margin: 2rem 0;
+  border-left: 5px blue solid;
+  border-radius: $box-border-radius;
+}
+
+.environment.theorem br {
+  margin-top: $par-skip;
+  display: block;
+}
+
+.environment.theorem .macro-HTMLclassTitle {
+  font-weight: bold;
+  display: block;
+}
+
+/* Proof environment */
+
+.environment.proof {
+  background-color: $box-background-color;
+  padding: $box-inner-padding;
+  border-left: 5px grey solid;
+  margin: 2rem 0;
+  border-radius: $box-border-radius;
+}
+
+.environment.proof br {
+  margin-top: $par-skip;
+  display: block;
+}
+
+.environment.proof .macro-HTMLclassTitle {
+  font-weight: bold;
+  display: block;
+}
